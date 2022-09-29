@@ -1,5 +1,5 @@
 <?php
-// Update extension, https://github.com/datenstrom/yellow-extensions/tree/master/source/update
+// Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
     const VERSION = "0.8.20";
@@ -109,7 +109,7 @@ class YellowUpdatePatch {
         }
         $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("updateCurrentFile");
         if (!is_file($fileName) && $this->yellow->extension->isExisting("update")) {
-            $url = $this->yellow->system->get("updateExtensionUrl")."/raw/master/".$this->yellow->system->get("updateLatestFile");
+            $url = $this->yellow->system->get("updateExtensionUrl")."/raw/main/".$this->yellow->system->get("updateLatestFile");
             list($statusCode, $fileData) = $this->yellow->extension->get("update")->getExtensionFile($url);
             if ($statusCode==200) {
                 $settings = $this->yellow->toolbox->getTextSettings($fileData, "extension");
