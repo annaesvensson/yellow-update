@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.81
+# Update 0.8.82
 
 Webseite auf dem neusten Stand halten.
 
@@ -106,4 +106,4 @@ Die Logdatei findet man in der Datei `system/extensions/yellow-website.log`.
 
 ## Entwickler
 
-Datenstrom. [Hilfe finden](https://datenstrom.se/de/yellow/help/).
+Anna Svensson. [Hilfe finden](https://datenstrom.se/de/yellow/help/).
