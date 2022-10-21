@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdate {
-    const VERSION = "0.8.84";
+    const VERSION = "0.8.85";
     const PRIORITY = "2";
     public $yellow;                 // access to API
     public $extensions;             // number of extensions
@@ -390,7 +390,7 @@ class YellowUpdate {
             if ($this->yellow->system->get("updateEventPending")!="none") {
                 foreach (explode(",", $this->yellow->system->get("updateEventPending")) as $token) {
                     list($extension, $action) = $this->yellow->toolbox->getTextList($token, "/", 2);
-                    if ($this->yellow->extension->isExisting($extension) && ($action!="ready" && $action!="uninstall")) {
+                    if ($this->yellow->extension->isExisting($extension) && $action!="uninstall") {
                         $value = $this->yellow->extension->data[$extension];
                         if (method_exists($value["object"], "onUpdate")) $value["object"]->onUpdate($action);
                     }
