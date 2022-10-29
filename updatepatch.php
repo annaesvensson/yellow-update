@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.8.20";
+    const VERSION = "0.8.21";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -19,6 +19,7 @@ class YellowUpdatePatch {
             $this->checkDatenstromYellow0818();
             $this->checkDatenstromYellow0819();
             $this->checkDatenstromYellow0820();
+            $this->checkDatenstromYellow0821();
         }
     }
     
@@ -30,19 +31,19 @@ class YellowUpdatePatch {
             $fileNameDestination = "system/extensions/yellow-system.ini";
             if (is_file($fileNameSource)) {
                 $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileNameSource);
-                $fileDataNew = str_replace("user.ini", "yellow-user.ini", $fileDataNew);
                 $fileDataNew = str_replace("language.ini", "yellow-language.ini", $fileDataNew);
+                $fileDataNew = str_replace("user.ini", "yellow-user.ini", $fileDataNew);
                 if (!$this->yellow->toolbox->createFile($fileNameDestination, $fileDataNew)) {
                     $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
                 }
             }
-            $fileNameSource = "system/settings/user.ini";
-            $fileNameDestination = "system/extensions/yellow-user.ini";
+            $fileNameSource = "system/settings/language.ini";
+            $fileNameDestination = "system/extensions/yellow-language.ini";
             if (is_file($fileNameSource) && !$this->yellow->toolbox->copyFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
             }
-            $fileNameSource = "system/settings/language.ini";
-            $fileNameDestination = "system/extensions/yellow-language.ini";
+            $fileNameSource = "system/settings/user.ini";
+            $fileNameDestination = "system/extensions/yellow-user.ini";
             if (is_file($fileNameSource) && !$this->yellow->toolbox->copyFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
             }
@@ -64,8 +65,8 @@ class YellowUpdatePatch {
             $this->yellow->system->set("coreServerRootDirectory", $pathRoot);
             $this->yellow->system->set("coreServerHomeDirectory", $pathHome);
             date_default_timezone_set($this->yellow->system->get("coreServerTimezone"));
-            $this->yellow->user->load("system/extensions/yellow-user.ini");
             $this->yellow->language->load("system/extensions/yellow-language.ini");
+            $this->yellow->user->load("system/extensions/yellow-user.ini");
             $patch = true;
         }
         $path = $this->yellow->system->get("coreLayoutDirectory");
@@ -230,5 +231,26 @@ class YellowUpdatePatch {
             }
         }
         if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.20");
+    }
+    
+    // Check patches for Datenstrom Yellow 0.8.21
+    public function checkDatenstromYellow0821() {
+        $patch = false;
+        $path = $this->yellow->system->get("coreExtensionDirectory");
+        $fileNames = $this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.txt$/", true, false);
+        if (!empty($fileNames)) {
+            $fileNameLatest = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("updateLatestFile");
+            $fileData = $this->yellow->toolbox->readFile($fileNameLatest);
+            $settings = $this->yellow->toolbox->getTextSettings($fileData, "extension");
+            foreach ($fileNames as $fileName) {
+                $extension = $this->yellow->lookup->normaliseName(basename($fileName), true, true);
+                if ($settings->isExisting($extension) &&
+                    !$this->yellow->toolbox->deleteFile($fileName, $this->yellow->system->get("coreTrashDirectory"))) {
+                    $this->yellow->log("error", "Can't delete file '$fileName'!");
+                }
+                if ($settings->isExisting($extension)) $patch = true;
+            }
+        }
+        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
     }
 }

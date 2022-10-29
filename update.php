@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdate {
-    const VERSION = "0.8.85";
+    const VERSION = "0.8.86";
     const PRIORITY = "2";
     public $yellow;                 // access to API
     public $extensions;             // number of extensions
