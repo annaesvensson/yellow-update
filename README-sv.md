@@ -1,22 +1,14 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.87
+# Update 0.8.88
 
 Håll din webbplats uppdaterad.
 
 <p align="center"><img src="update-screenshot.png?raw=true" alt="Skärmdump"></p>
 
-## Hur man uppdaterar en webbplats
-
-Det första alternativet är att uppdatera din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna och leta efter uppdateringar. Din webbplats kommer att visas om uppdateringar är tillgängliga. Du måste ha uppdateringsrättigheter för att uppdatera en webbplats. Alla användarkonton lagras i filen `system/extensions/yellow-user.ini`.
-
-Det andra alternativet är att uppdatera din webbplats på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera din webbplats skriv `php yellow.php update all`. Du kan eventuellt lägga till namnet på ett tillägg.
-
-Om filer raderas kan du hitta dem i `system/trash` mappen. 
-
 ## Hur man lägga till tillägg
 
-Du kan ladda ner och lägga till tillägg som ZIP-filer. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
+Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Högerklicka om du använder Safari. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
 
 ## Hur man ta bort tillägg
 
@@ -31,6 +23,14 @@ Du kan använda förkortningar för att visa information om webbplatsen:
 `[yellow about]` för aktuell version  
 `[yellow release]` för aktuell produktutgåva  
 `[yellow log]` för senaste poster i loggfilen  
+
+## Hur man uppdaterar en webbplats
+
+Det första alternativet är att uppdatera din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna och leta efter uppdateringar. Din webbplats kommer att visas om uppdateringar är tillgängliga. Du måste ha uppdateringsrättigheter för att uppdatera en webbplats. Alla användarkonton lagras i filen `system/extensions/yellow-user.ini`.
+
+Det andra alternativet är att uppdatera din webbplats på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera din webbplats skriv `php yellow.php update all`. Du kan eventuellt lägga till namnet på ett tillägg.
+
+Om filer raderas kan du hitta dem i `system/trash` mappen. 
 
 ## Exempel
 
@@ -61,18 +61,6 @@ Innehållsfil med loggfil:
 
     ! [yellow log]
 
-Visa aktuell version på kommandoraden:
- 
-`php yellow.php about`
-
-Visa uppdateringar på kommandoraden:
- 
-`php yellow.php update`  
-
-Uppdatera webbplats på kommandoraden:
- 
-`php yellow.php update all`  
-
 Lägga till tillägg på kommandoraden:
 
 `php yellow.php install`  
@@ -84,6 +72,18 @@ Ta bort tillägg på kommandoraden:
 `php yellow.php uninstall`  
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
+
+Visa aktuell version på kommandoraden:
+ 
+`php yellow.php about`
+
+Visa uppdateringar på kommandoraden:
+ 
+`php yellow.php update`  
+
+Uppdatera webbplats på kommandoraden:
+ 
+`php yellow.php update all`  
 
 ## Inställningar
 
@@ -102,7 +102,7 @@ Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
 ## Installation
 
-[Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera zip-fil till din `system/extensions` mapp. Högerklicka om du använder Safari.
+[Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera ZIP-fil till din `system/extensions` mapp.
 
 ## Utvecklare
 
