@@ -14,13 +14,13 @@ Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensi
 
 Du kan manuellt ta bort tillägg som PHP-filer. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
 
-## Hur man visar aktuella versionen
+## Hur man visar tillägg
 
 Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna. Du kan också visa den aktuella versionen på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php about`.
 
 Du kan använda förkortningar för att visa information om webbplatsen:
 
-`[yellow about]` för aktuell version  
+`[yellow about]` för installerade tillägg  
 `[yellow release]` för aktuell produktutgåva  
 `[yellow log]` för senaste poster i loggfilen  
 
@@ -34,12 +34,12 @@ Om filer raderas kan du hitta dem i `system/trash` mappen.
 
 ## Exempel
 
-Innehållsfil med aktuell version:
+Innehållsfil med installerade tillägg:
 
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar aktuella versionen.
+    Den här sidan visar installerade tillägg.
 
     ! [yellow about]
 
@@ -73,9 +73,11 @@ Ta bort tillägg på kommandoraden:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Visa aktuell version på kommandoraden:
+Visa tillägg på kommandoraden:
  
 `php yellow.php about`
+`php yellow.php about gallery`  
+`php yellow.php about english german swedish`  
 
 Visa uppdateringar på kommandoraden:
  
@@ -102,7 +104,7 @@ Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
 ## Installation
 
-[Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera ZIP-fil till din `system/extensions` mapp.
+[Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera ZIP-fil till din `system/extensions` mapp. [Läs mer om tillägg](#hur-man-lägga-till-tillägg).
 
 ## Utvecklare
 

@@ -14,13 +14,13 @@ You can download extensions as ZIP files and copy them into your `system/extensi
 
 You can manually remove extensions as PHP files. You can also remove extensions at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php uninstall` followed by more arguments.
 
-## How to show the current version
+## How to show extensions
 
 You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can also show the current version at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. 
 
 You can use shortcuts to show information about the website:
 
-`[yellow about]` for current version  
+`[yellow about]` for installed extensions  
 `[yellow release]` for current product release  
 `[yellow log]` for latest entries in log file  
 
@@ -34,12 +34,12 @@ If files are deleted you can find them in the `system/trash` folder.
 
 ## Examples
 
-Content file with current version:
+Content file with installed extensions:
 
     ---
     Title: Example page
     ---
-    This page shows the current version.
+    This page shows the installed extensions.
 
     ! [yellow about]
 
@@ -73,9 +73,11 @@ Removing extensions at the command line:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Showing current version at the command line:
+Showing extensions at the command line:
  
 `php yellow.php about`
+`php yellow.php about gallery`  
+`php yellow.php about english german swedish`  
 
 Showing updates at the command line:
 
@@ -102,7 +104,7 @@ The log file can be found in file `system/extensions/yellow-website.log`.
 
 ## Installation
 
-[Download extension](https://github.com/annaesvensson/yellow-update/archive/main.zip) and copy ZIP file into your `system/extensions` folder.
+[Download extension](https://github.com/annaesvensson/yellow-update/archive/main.zip) and copy ZIP file into your `system/extensions` folder. [Learn more about extensions](#how-to-add-extensions).
 
 ## Developer
 

@@ -14,13 +14,13 @@ Du kannst Erweiterungen als ZIP-Dateien herunterladen und in dein `system/extens
 
 Du kannst Erweiterungen als PHP-Dateien manuell entfernen. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) entfernen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php uninstall` gefolgt von weiteren Argumenten.
 
-## Wie man die aktuelle Version anzeigt
+## Wie man Erweiterungen anzeigt
 
 Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) anzeigen. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen. Du kannst die aktuelle Version auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) anzeigen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php about`. 
 
 Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen:
 
-`[yellow about]` für aktuelle Version  
+`[yellow about]` für installierte Erweiterungen  
 `[yellow release]` für aktuelle Produktversion  
 `[yellow log]` für neueste Einträge in der Logdatei  
 
@@ -34,12 +34,12 @@ Falls Dateien gelöscht werden, kannst du sie im `system/trash`-Verzeichnis wied
 
 ## Beispiele
 
-Inhaltsdatei mit aktueller Version:
+Inhaltsdatei mit installierten Erweiterungen:
 
     ---
     Title: Beispiel-Seite
     ---
-    Diese Seite zeigt die aktuelle Version:
+    Diese Seite zeigt die installierten Erweiterungen:
 
     ! [yellow about]
 
@@ -73,9 +73,11 @@ Erweiterungen in der Befehlszeile entfernen:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Aktuelle Version in der Befehlszeile anzeigen:
+Erweiterungen in der Befehlszeile anzeigen:
  
 `php yellow.php about`
+`php yellow.php about gallery`  
+`php yellow.php about english german swedish`  
 
 Aktualisierungen in der Befehlszeile anzeigen:
  
@@ -102,7 +104,7 @@ Die Logdatei findet man in der Datei `system/extensions/yellow-website.log`.
 
 ## Installation
 
-[Erweiterung herunterladen](https://github.com/annaesvensson/yellow-update/archive/main.zip) und die ZIP-Datei in dein `system/extensions`-Verzeichnis kopieren.
+[Erweiterung herunterladen](https://github.com/annaesvensson/yellow-update/archive/main.zip) und die ZIP-Datei in dein `system/extensions`-Verzeichnis kopieren. [Weitere Informationen zu Erweiterungen](#wie-man-erweiterungen-hinzufügt).
 
 ## Entwickler
 
