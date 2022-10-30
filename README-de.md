@@ -75,7 +75,7 @@ Erweiterungen in der Befehlszeile entfernen:
 
 Erweiterungen in der Befehlszeile anzeigen:
  
-`php yellow.php about`
+`php yellow.php about`  
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 

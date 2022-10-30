@@ -75,7 +75,7 @@ Removing extensions at the command line:
 
 Showing extensions at the command line:
  
-`php yellow.php about`
+`php yellow.php about`  
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 

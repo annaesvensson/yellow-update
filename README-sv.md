@@ -6,11 +6,11 @@ Håll din webbplats uppdaterad.
 
 <p align="center"><img src="update-screenshot.png?raw=true" alt="Skärmdump"></p>
 
-## Hur man lägga till tillägg
+## Hur man lägger till tillägg
 
 Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Högerklicka om du använder Safari. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
 
-## Hur man ta bort tillägg
+## Hur man tar bort tillägg
 
 Du kan manuellt ta bort tillägg som PHP-filer. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
 
@@ -75,7 +75,7 @@ Ta bort tillägg på kommandoraden:
 
 Visa tillägg på kommandoraden:
  
-`php yellow.php about`
+`php yellow.php about`  
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 
