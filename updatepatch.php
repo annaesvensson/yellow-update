@@ -238,7 +238,7 @@ class YellowUpdatePatch {
         $patch = false;
         $path = $this->yellow->system->get("coreExtensionDirectory");
         $fileNames = $this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.txt$/", true, false);
-        if (!empty($fileNames)) {
+        if (!is_array_empty($fileNames)) {
             $fileNameLatest = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("updateLatestFile");
             $fileData = $this->yellow->toolbox->readFile($fileNameLatest);
             $settings = $this->yellow->toolbox->getTextSettings($fileData, "extension");
