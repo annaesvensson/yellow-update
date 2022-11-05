@@ -251,6 +251,13 @@ class YellowUpdatePatch {
                 if ($settings->isExisting($extension)) $patch = true;
             }
         }
+        if ($this->yellow->system->isExisting("coreStaticUrl")) {
+            $commandStaticUrl = $this->yellow->system->get("coreStaticUrl");
+            if (!$this->yellow->system->save($fileName, array("commandStaticUrl" => $commandStaticUrl))) {
+                $this->yellow->log("error", "Can't write file '$fileName'!");
+            }
+            $patch = true;
+        }
         if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
     }
 }
