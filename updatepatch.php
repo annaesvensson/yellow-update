@@ -236,6 +236,14 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.8.21
     public function checkDatenstromYellow0821() {
         $patch = false;
+        $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
+        if ($this->yellow->system->isExisting("coreStaticUrl")) {
+            $commandStaticUrl = $this->yellow->system->get("coreStaticUrl");
+            if (!$this->yellow->system->save($fileName, array("commandStaticUrl" => $commandStaticUrl))) {
+                $this->yellow->log("error", "Can't write file '$fileName'!");
+            }
+            $patch = true;
+        }
         $path = $this->yellow->system->get("coreExtensionDirectory");
         $fileNames = $this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.txt$/", true, false);
         if (!is_array_empty($fileNames)) {
@@ -250,13 +258,6 @@ class YellowUpdatePatch {
                 }
                 if ($settings->isExisting($extension)) $patch = true;
             }
-        }
-        if ($this->yellow->system->isExisting("coreStaticUrl")) {
-            $commandStaticUrl = $this->yellow->system->get("coreStaticUrl");
-            if (!$this->yellow->system->save($fileName, array("commandStaticUrl" => $commandStaticUrl))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
-            }
-            $patch = true;
         }
         if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
     }
