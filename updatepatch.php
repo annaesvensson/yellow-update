@@ -259,6 +259,15 @@ class YellowUpdatePatch {
                 if ($settings->isExisting($extension)) $patch = true;
             }
         }
+        $path = $this->yellow->system->get("coreLayoutDirectory");
+        foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
+            $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
+            $fileDataNew = str_replace("yellow->toolbox->normaliseArguments", "yellow->lookup->normaliseArguments", $fileDataNew);
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                $this->yellow->log("error", "Can't write file '$entry'!");
+            }
+            if ($fileData!=$fileDataNew) $patch = true;
+        }
         if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
     }
 }
