@@ -39,7 +39,7 @@ Inhaltsdatei mit installierten Erweiterungen:
     ---
     Title: Beispiel-Seite
     ---
-    Diese Seite zeigt die installierten Erweiterungen:
+    Diese Seite zeigt die installierten Erweiterungen.
 
     ! [yellow about]
 
