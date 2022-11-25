@@ -102,6 +102,10 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 
 Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
+## Tack
+
+Detta tilläg använder [curl](https://github.com/curl/curl) av Daniel Stenberg. Tack för det användbara biblioteket.
+
 ## Installation
 
 [Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera ZIP-fil till din `system/extensions` mapp. [Läs mer om tillägg](#hur-man-lägga-till-tillägg).
