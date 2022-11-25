@@ -102,6 +102,10 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 The log file can be found in file `system/extensions/yellow-website.log`.
 
+## Acknowledgements
+
+This extension uses [curl](https://github.com/curl/curl) by Daniel Stenberg. Thank you for the useful library.
+
 ## Installation
 
 [Download extension](https://github.com/annaesvensson/yellow-update/archive/main.zip) and copy ZIP file into your `system/extensions` folder. [Learn more about extensions](#how-to-add-extensions).
