@@ -6,13 +6,13 @@ Keep your website up to date.
 
 <p align="center"><img src="update-screenshot.png?raw=true" alt="Screenshot"></p>
 
-## How to add extensions
+## How to install extensions
 
-You can download extensions as ZIP files and copy them into your `system/extensions` folder. Right click if you use Safari. You can also add extensions at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php install` followed by more arguments.
+You can download extensions as ZIP files and copy them into your `system/extensions` folder. Right click if you use Safari. You can also install extensions at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php install` followed by more arguments.
 
-## How to remove extensions
+## How to uninstall extensions
 
-You can manually remove extensions as PHP files. You can also remove extensions at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php uninstall` followed by more arguments.
+You can manually remove extensions as PHP files. You can also uninstall extensions at the [command line](https://github.com/annaesvensson/yellow-command). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php uninstall` followed by more arguments.
 
 ## How to show extensions
 
@@ -61,13 +61,13 @@ Content file with log file:
 
     ! [yellow log]
 
-Adding extensions at the command line:
+Installing extensions at the command line:
 
 `php yellow.php install`  
 `php yellow.php install gallery`  
 `php yellow.php install english german swedish`  
 
-Removing extensions at the command line:
+Uninstalling extensions at the command line:
 
 `php yellow.php uninstall`  
 `php yellow.php uninstall gallery`  
@@ -105,10 +105,6 @@ The log file can be found in file `system/extensions/yellow-website.log`.
 ## Acknowledgements
 
 This extension uses [curl](https://github.com/curl/curl) by Daniel Stenberg. Thank you for the useful library.
-
-## Installation
-
-[Download extension](https://github.com/annaesvensson/yellow-update/archive/main.zip) and copy ZIP file into your `system/extensions` folder. [Learn more about extensions](#how-to-add-extensions).
 
 ## Developer
 

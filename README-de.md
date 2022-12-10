@@ -6,13 +6,13 @@ Webseite auf dem neusten Stand halten.
 
 <p align="center"><img src="update-screenshot.png?raw=true" alt="Bildschirmfoto"></p>
 
-## Wie man Erweiterungen hinzufügt
+## Wie man Erweiterungen installiert
 
-Du kannst Erweiterungen als ZIP-Dateien herunterladen und in dein `system/extensions`-Verzeichnis kopieren. Rechtsklick bei Safari. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) hinzufügen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php install` gefolgt von weiteren Argumenten.
+Du kannst Erweiterungen als ZIP-Dateien herunterladen und in dein `system/extensions`-Verzeichnis kopieren. Rechtsklick bei Safari. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) installieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php install` gefolgt von weiteren Argumenten.
 
-## Wie man Erweiterungen entfernt
+## Wie man Erweiterungen deinstalliert
 
-Du kannst Erweiterungen als PHP-Dateien manuell entfernen. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) entfernen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php uninstall` gefolgt von weiteren Argumenten.
+Du kannst Erweiterungen als PHP-Dateien manuell entfernen. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-command/tree/main/README-de.md) deinstallieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php uninstall` gefolgt von weiteren Argumenten.
 
 ## Wie man Erweiterungen anzeigt
 
@@ -61,13 +61,13 @@ Inhaltsdatei mit Logdatei:
 
     ! [yellow log]
 
-Erweiterungen in der Befehlszeile hinzufügen:
+Erweiterungen in der Befehlszeile installieren:
 
 `php yellow.php install`  
 `php yellow.php install gallery`  
 `php yellow.php install english german swedish`  
 
-Erweiterungen in der Befehlszeile entfernen:
+Erweiterungen in der Befehlszeile deinstallieren:
 
 `php yellow.php uninstall`  
 `php yellow.php uninstall gallery`  
@@ -105,10 +105,6 @@ Die Logdatei findet man in der Datei `system/extensions/yellow-website.log`.
 ## Danksagung
 
 Diese Erweiterung verwendet [curl](https://github.com/curl/curl) von Daniel Stenberg. Danke für die nützliche Bibliothek.
-
-## Installation
-
-[Erweiterung herunterladen](https://github.com/annaesvensson/yellow-update/archive/main.zip) und die ZIP-Datei in dein `system/extensions`-Verzeichnis kopieren. [Weitere Informationen zu Erweiterungen](#wie-man-erweiterungen-hinzufügt).
 
 ## Entwickler
 

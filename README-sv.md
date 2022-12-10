@@ -6,13 +6,13 @@ Håll din webbplats uppdaterad.
 
 <p align="center"><img src="update-screenshot.png?raw=true" alt="Skärmdump"></p>
 
-## Hur man lägger till tillägg
+## Hur man installerar till tillägg
 
-Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Högerklicka om du använder Safari. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
+Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Högerklicka om du använder Safari. Du kan också installera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
 
-## Hur man tar bort tillägg
+## Hur man avinstallerar bort tillägg
 
-Du kan manuellt ta bort tillägg som PHP-filer. Du kan också lägga till tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
+Du kan manuellt ta bort tillägg som PHP-filer. Du kan också avinstallera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-command/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
 
 ## Hur man visar tillägg
 
@@ -61,13 +61,13 @@ Innehållsfil med loggfil:
 
     ! [yellow log]
 
-Lägga till tillägg på kommandoraden:
+Installera tillägg på kommandoraden:
 
 `php yellow.php install`  
 `php yellow.php install gallery`  
 `php yellow.php install english german swedish`  
 
-Ta bort tillägg på kommandoraden:
+Avinstallera tillägg på kommandoraden:
 
 `php yellow.php uninstall`  
 `php yellow.php uninstall gallery`  
@@ -105,10 +105,6 @@ Loggfilen finns i filen `system/extensions/yellow-website.log`.
 ## Tack
 
 Detta tilläg använder [curl](https://github.com/curl/curl) av Daniel Stenberg. Tack för det användbara biblioteket.
-
-## Installation
-
-[Ladda ner tillägg](https://github.com/annaesvensson/yellow-update/archive/main.zip) och kopiera ZIP-fil till din `system/extensions` mapp. [Läs mer om tillägg](#hur-man-lägga-till-tillägg).
 
 ## Utvecklare
 
