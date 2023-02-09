@@ -91,7 +91,7 @@ Webseite in der Befehlszeile aktualisieren:
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
-`UpdateExtensionUrl` = Repository mit Erweiterungen  
+`UpdateExtensionUrl` = Repository mit veröffentlichten Erweiterungen  
 `UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
 `UpdateLatestFile` = Datei mit neusten Aktualisierungs-Einstellungen  
 `UpdateCurrentFile` = Datei mit aktuellen Aktualisierungs-Einstellungen  

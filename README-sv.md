@@ -91,7 +91,7 @@ Uppdatera webbplats på kommandoraden:
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
 
-`UpdateExtensionUrl` = repository med tilläg  
+`UpdateExtensionUrl` = repository med publicerade tillägg  
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateLatestFile` = fil med senaste uppdateringsinställningar  
 `UpdateCurrentFile` = fil med aktuella uppdateringsinställningar  
@@ -104,7 +104,7 @@ Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
 ## Tack
 
-Detta tilläg använder [curl](https://github.com/curl/curl) av Daniel Stenberg. Tack för det användbara biblioteket.
+Detta tillägg använder [curl](https://github.com/curl/curl) av Daniel Stenberg. Tack för det användbara biblioteket.
 
 ## Utvecklare
 

@@ -91,7 +91,7 @@ Updating website at the command line:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`UpdateExtensionUrl` = repository with extensions  
+`UpdateExtensionUrl` = repository with published extensions  
 `UpdateExtensionFile` = file with extension settings  
 `UpdateLatestFile` = file with latest update settings  
 `UpdateCurrentFile` = file with current update settings  
