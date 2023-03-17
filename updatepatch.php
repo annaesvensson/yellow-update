@@ -244,6 +244,17 @@ class YellowUpdatePatch {
             }
             $patch = true;
         }
+        if ($this->yellow->system->isExisting("blogEntriesMax")) {
+            $path = $this->yellow->system->get("coreContentDirectory");
+            foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.(md|txt)$/", true, false) as $entry) {
+                $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
+                $fileDataNew = str_replace("[blogchanges", "[blogpages", $fileDataNew);
+                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                    $this->yellow->log("error", "Can't write file '$entry'!");
+                }
+                if ($fileData!=$fileDataNew) $patch = true;
+            }
+        }
         $path = $this->yellow->system->get("coreExtensionDirectory");
         $fileNames = $this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.txt$/", true, false);
         if (!is_array_empty($fileNames)) {
