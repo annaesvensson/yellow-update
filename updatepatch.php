@@ -34,21 +34,21 @@ class YellowUpdatePatch {
                 $fileDataNew = str_replace("language.ini", "yellow-language.ini", $fileDataNew);
                 $fileDataNew = str_replace("user.ini", "yellow-user.ini", $fileDataNew);
                 if (!$this->yellow->toolbox->createFile($fileNameDestination, $fileDataNew)) {
-                    $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
                 }
             }
             $fileNameSource = "system/settings/language.ini";
             $fileNameDestination = "system/extensions/yellow-language.ini";
             if (is_file($fileNameSource) && !$this->yellow->toolbox->copyFile($fileNameSource, $fileNameDestination)) {
-                $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             $fileNameSource = "system/settings/user.ini";
             $fileNameDestination = "system/extensions/yellow-user.ini";
             if (is_file($fileNameSource) && !$this->yellow->toolbox->copyFile($fileNameSource, $fileNameDestination)) {
-                $this->yellow->log("error", "Can't write file '$fileNameDestination'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             if (!$this->yellow->toolbox->deleteDirectory("system/settings/", $this->yellow->system->get("coreTrashDirectory"))) {
-                $this->yellow->log("error", "Can't delete directory 'system/settings/'!");
+                $this->yellow->toolbox->log("error", "Can't delete directory 'system/settings/'!");
             }
             $this->yellow->system->load("system/extensions/yellow-system.ini");
             $this->yellow->system->set("coreSystemFile", "yellow-system.ini");
@@ -81,11 +81,11 @@ class YellowUpdatePatch {
             $fileDataNew = str_replace("\$this->yellow->content->shared(\"sidebar\")", "\$this->yellow->page->isPage(\"sidebar\")", $fileDataNew);
             $fileDataNew = str_replace("php if (\$page = null)", "php /* Remove this line */ if (\$page = null)", $fileDataNew);
             if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                $this->yellow->log("error", "Can't write file '$entry'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.15");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.15");
     }
         
     // Check patches for Datenstrom Yellow 0.8.16
@@ -96,7 +96,7 @@ class YellowUpdatePatch {
             date_default_timezone_set($this->yellow->system->get("coreServerTimezone"));
             $coreTimezone = $this->yellow->system->get("coreServerTimezone");
             if (!$this->yellow->system->save($fileName, array("coreTimezone" => $coreTimezone))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
@@ -104,7 +104,7 @@ class YellowUpdatePatch {
             $updateEventPending = $this->yellow->system->get("updateNotification");
             $settings = array("updateCurrentRelease" => "0.8.16", "updateEventPending" => $updateEventPending);
             if (!$this->yellow->system->save($fileName, $settings)) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
@@ -125,12 +125,12 @@ class YellowUpdatePatch {
                     }
                 }
                 if (!$this->yellow->toolbox->createFile($fileName, $fileData)) {
-                    $this->yellow->log("error", "Can't write file '$fileName'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
                 }
                 $patch = true;
             }
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.16");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.16");
     }
 
     // Check patches for Datenstrom Yellow 0.8.17
@@ -139,31 +139,31 @@ class YellowUpdatePatch {
         $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
         if ($this->yellow->system->get("galleryStyle")=="photoswipe") {
             if (!$this->yellow->system->save($fileName, array("galleryStyle" => "zoom"))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
         if ($this->yellow->system->get("sliderStyle")=="flickity") {
             if (!$this->yellow->system->save($fileName, array("sliderStyle" => "loop"))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
         if ($this->yellow->system->isExisting("blogLocation")) {
             $blogStartLocation = $this->yellow->system->get("blogLocation");
             if (!$this->yellow->system->save($fileName, array("blogStartLocation" => $blogStartLocation))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
         if ($this->yellow->system->isExisting("wikiLocation")) {
             $wikiStartLocation = $this->yellow->system->get("wikiLocation");
             if (!$this->yellow->system->save($fileName, array("wikiStartLocation" => $wikiStartLocation))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.17");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.17");
     }
 
     // Check patches for Datenstrom Yellow 0.8.18
@@ -177,7 +177,7 @@ class YellowUpdatePatch {
                 $fileDataNew = preg_replace("/Layout: blogpages/i", "Layout: blog-start", $fileDataNew);
                 $fileDataNew = preg_replace("/Layout: wikipages/i", "Layout: wiki-start", $fileDataNew);
                 if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                    $this->yellow->log("error", "Can't write file '$entry'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
             }
@@ -187,12 +187,12 @@ class YellowUpdatePatch {
                 $fileDataNew = str_replace("yellow->page->getPage(\"blog\")", "yellow->page->getPage(\"blogStart\")", $fileDataNew);
                 $fileDataNew = str_replace("yellow->page->getPage(\"wiki\")", "yellow->page->getPage(\"wikiStart\")", $fileDataNew);
                 if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                    $this->yellow->log("error", "Can't write file '$entry'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
             }
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.18");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.18");
     }
 
     // Check patches for Datenstrom Yellow 0.8.19
@@ -204,13 +204,13 @@ class YellowUpdatePatch {
             $fileDataOld = $this->yellow->toolbox->readFile($fileNameOld);
             $fileDataNew = $this->yellow->toolbox->readFile($fileNameNew);
             if (!$this->yellow->toolbox->deleteFile($fileNameOld, $this->yellow->system->get("coreTrashDirectory"))) {
-                $this->yellow->log("error", "Can't delete file '$fileNameOld'!");
+                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameOld'!");
             } elseif (!$this->yellow->toolbox->createFile($fileNameNew, $fileDataOld.$fileDataNew)) {
-                $this->yellow->log("error", "Can't write file '$fileNameNew'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameNew'!");
             }
             $patch = true;
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.19");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.19");
     }
     
     // Check patches for Datenstrom Yellow 0.8.20
@@ -225,12 +225,12 @@ class YellowUpdatePatch {
                 $fileDataNew = preg_replace("/\[slider\s+(\S+)\s+(loop|fade|slide)/i", "[slider $1 name $2", $fileDataNew);
                 $fileDataNew = preg_replace("/\[slider\s+(\S+)\s+(\-)\s+([\d\.\%]+)/i", "[slider $1 name loop $3", $fileDataNew);
                 if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                    $this->yellow->log("error", "Can't write file '$entry'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
             }
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.20");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.20");
     }
     
     // Check patches for Datenstrom Yellow 0.8.21
@@ -240,7 +240,7 @@ class YellowUpdatePatch {
         if ($this->yellow->system->isExisting("coreStaticUrl")) {
             $commandStaticUrl = $this->yellow->system->get("coreStaticUrl");
             if (!$this->yellow->system->save($fileName, array("commandStaticUrl" => $commandStaticUrl))) {
-                $this->yellow->log("error", "Can't write file '$fileName'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
@@ -250,7 +250,7 @@ class YellowUpdatePatch {
                 $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
                 $fileDataNew = str_replace("[blogchanges", "[blogpages", $fileDataNew);
                 if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                    $this->yellow->log("error", "Can't write file '$entry'!");
+                    $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
             }
@@ -265,7 +265,7 @@ class YellowUpdatePatch {
                 $extension = $this->yellow->lookup->normaliseName(basename($fileName), true, true);
                 if ($settings->isExisting($extension) &&
                     !$this->yellow->toolbox->deleteFile($fileName, $this->yellow->system->get("coreTrashDirectory"))) {
-                    $this->yellow->log("error", "Can't delete file '$fileName'!");
+                    $this->yellow->toolbox->log("error", "Can't delete file '$fileName'!");
                 }
                 if ($settings->isExisting($extension)) $patch = true;
             }
@@ -275,10 +275,10 @@ class YellowUpdatePatch {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
             $fileDataNew = str_replace("yellow->toolbox->normaliseArguments", "yellow->lookup->normaliseArguments", $fileDataNew);
             if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
-                $this->yellow->log("error", "Can't write file '$entry'!");
+                $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
         }
-        if ($patch) $this->yellow->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
     }
 }
