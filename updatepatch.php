@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.8.21";
+    const VERSION = "0.8.22";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -20,6 +20,7 @@ class YellowUpdatePatch {
             $this->checkDatenstromYellow0819();
             $this->checkDatenstromYellow0820();
             $this->checkDatenstromYellow0821();
+            $this->checkDatenstromYellow0822();
         }
     }
     
@@ -73,7 +74,7 @@ class YellowUpdatePatch {
         foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
             $key = str_replace("pages", "", $this->yellow->lookup->normaliseName(basename($entry), true, true));
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
-            $fileDataNew = str_replace("text->getHtml", "language->getTextHtml", $fileDataNew);
+            $fileDataNew = str_replace("text->getHtml(", "language->getTextHtml(", $fileDataNew);
             $fileDataNew = str_replace("yellow->page->getPages()", "yellow->page->getPages(\"$key\")", $fileDataNew);
             $fileDataNew = str_replace("\$page = \$this->yellow->content->shared(\"header\")", "\$page = null", $fileDataNew);
             $fileDataNew = str_replace("\$page = \$this->yellow->content->shared(\"footer\")", "\$page = null", $fileDataNew);
@@ -273,12 +274,28 @@ class YellowUpdatePatch {
         $path = $this->yellow->system->get("coreLayoutDirectory");
         foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
-            $fileDataNew = str_replace("yellow->toolbox->normaliseArguments", "yellow->lookup->normaliseArguments", $fileDataNew);
+            $fileDataNew = str_replace("yellow->toolbox->normaliseArguments(", "yellow->lookup->normaliseArguments(", $fileDataNew);
             if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
         }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.21");
+    }
+    
+    // Check patches for Datenstrom Yellow 0.8.22
+    public function checkDatenstromYellow0822() {
+        $patch = false;
+        $path = $this->yellow->system->get("coreLayoutDirectory");
+        foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
+            $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
+            $fileDataNew = str_replace("yellow->page->getContent(", "yellow->page->getContentHtml(", $fileDataNew);
+            $fileDataNew = str_replace("yellow->page->getExtra(", "yellow->page->getExtraHtml(", $fileDataNew);
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
+            }
+            if ($fileData!=$fileDataNew) $patch = true;
+        }
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.22");
     }
 }
