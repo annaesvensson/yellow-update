@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.95
+# Update 0.8.96
 
 Webseite auf dem neusten Stand halten.
 
@@ -91,11 +91,11 @@ Webseite in der Befehlszeile aktualisieren:
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
-`UpdateExtensionUrl` = Repository mit veröffentlichten Erweiterungen  
-`UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
+`UpdateCurrentRelease` = momentan installierte Produktversion  
+`UpdateLatestUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
 `UpdateLatestFile` = Datei mit neusten Aktualisierungs-Einstellungen  
 `UpdateCurrentFile` = Datei mit aktuellen Aktualisierungs-Einstellungen  
-`UpdateCurrentRelease` = momentan installierte Produktversion  
+`UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  

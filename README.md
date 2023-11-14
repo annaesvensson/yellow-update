@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.95
+# Update 0.8.96
 
 Keep your website up to date.
 
@@ -91,11 +91,11 @@ Updating website at the command line:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`UpdateExtensionUrl` = repository with published extensions  
-`UpdateExtensionFile` = file with extension settings  
+`UpdateCurrentRelease` = currently installed product release  
+`UpdateLatestUrl` = URL with updates, `auto` for automatic detection  
 `UpdateLatestFile` = file with latest update settings  
 `UpdateCurrentFile` = file with current update settings  
-`UpdateCurrentRelease` = currently installed product release  
+`UpdateExtensionFile` = file with extension settings  
 `UpdateEventPending` = pending events  
 `UpdateEventDaily` = time of next daily event  
 `UpdateTrashTimeout` = storage of deleted files in seconds  

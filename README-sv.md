@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.95
+# Update 0.8.96
 
 Håll din webbplats uppdaterad.
 
@@ -91,11 +91,11 @@ Uppdatera webbplats på kommandoraden:
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
 
-`UpdateExtensionUrl` = repository med publicerade tillägg  
-`UpdateExtensionFile` = fil med tilläggsinställningar  
+`UpdateCurrentRelease` = för närvarande installerad produktversion  
+`UpdateLatestUrl` = URL med uppdateringar, `auto` för automatisk detektering  
 `UpdateLatestFile` = fil med senaste uppdateringsinställningar  
 `UpdateCurrentFile` = fil med aktuella uppdateringsinställningar  
-`UpdateCurrentRelease` = för närvarande installerad produktversion  
+`UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  

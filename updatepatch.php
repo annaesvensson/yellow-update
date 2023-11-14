@@ -109,28 +109,6 @@ class YellowUpdatePatch {
             }
             $patch = true;
         }
-        $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("updateCurrentFile");
-        if (!is_file($fileName) && $this->yellow->extension->isExisting("update")) {
-            $url = $this->yellow->system->get("updateExtensionUrl")."/raw/main/".$this->yellow->system->get("updateLatestFile");
-            list($statusCode, $fileData) = $this->yellow->extension->get("update")->getExtensionFile($url);
-            if ($statusCode==200) {
-                $settings = $this->yellow->toolbox->getTextSettings($fileData, "extension");
-                foreach ($settings as $key=>$value) {
-                    if ($this->yellow->extension->isExisting($key)) {
-                        $settingsNew = new YellowArray();
-                        $settingsNew["extension"] = ucfirst($key);
-                        $settingsNew["version"] = $this->yellow->extension->data[$key]["version"];
-                        $fileData = $this->yellow->toolbox->setTextSettings($fileData, "extension", $key, $settingsNew);
-                    } else {
-                        $fileData = $this->yellow->toolbox->unsetTextSettings($fileData, "extension", $key);
-                    }
-                }
-                if (!$this->yellow->toolbox->createFile($fileName, $fileData)) {
-                    $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
-                }
-                $patch = true;
-            }
-        }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.16");
     }
 
