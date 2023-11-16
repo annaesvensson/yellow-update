@@ -4,7 +4,7 @@
 
 Håll din webbplats uppdaterad.
 
-<p align="center"><img src="update-screenshot.png?raw=true" alt="Skärmdump"></p>
+<p align="center"><img src="SCREENSHOT.png?raw=true" alt="Skärmdump"></p>
 
 ## Hur man installerar tillägg
 
