@@ -4,7 +4,7 @@
 
 Webseite auf dem neusten Stand halten.
 
-<p align="center"><img src="SCREENSHOT.png?raw=true" alt="Bildschirmfoto"></p>
+<p align="center"><img src="SCREENSHOT.png" alt="Bildschirmfoto"></p>
 
 ## Wie man Erweiterungen installiert
 
