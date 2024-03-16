@@ -100,7 +100,7 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
-Die folgenden Dateien werden durch den Update-Mechanismus aktualisiert:
+Die folgenden Dateien werden bei der Aktualisierung der Webseite geändert:
 
 `system/extensions/update-latest.ini` = Datei mit den verfügbaren Erweiterungen, [siehe neuste Datei](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-latest.ini)  
 `system/extensions/update-current.ini` = Datei mit den installierten Erweiterungen  
