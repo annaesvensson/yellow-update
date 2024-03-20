@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.97
+# Update 0.8.98
 
 Keep your website up to date.
 
@@ -92,9 +92,9 @@ Updating website at the command line:
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `UpdateCurrentRelease` = currently installed product release  
-`UpdateLatestUrl` = URL with updates, `auto` for automatic detection  
-`UpdateLatestFile` = file with latest update settings  
-`UpdateCurrentFile` = file with current update settings  
+`UpdateAvailableUrl` = URL with updates, `auto` for automatic detection  
+`UpdateAvailableFile` = file with update settings for available extensions  
+`UpdateCurrentFile` = file with update settings for installed extensions  
 `UpdateExtensionFile` = file with extension settings  
 `UpdateEventPending` = pending events  
 `UpdateEventDaily` = time of next daily event  
@@ -102,7 +102,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 The following files will be modified when the website is updated:
 
-`system/extensions/update-latest.ini` = file with available extensions, [see latest file](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-latest.ini)  
+`system/extensions/update-available.ini` = file with [available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
 `system/extensions/update-current.ini` = file with installed extensions  
 
 The log file can be found in file `system/extensions/yellow-website.log`.

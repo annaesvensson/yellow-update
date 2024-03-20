@@ -234,21 +234,6 @@ class YellowUpdatePatch {
                 if ($fileData!=$fileDataNew) $patch = true;
             }
         }
-        $path = $this->yellow->system->get("coreExtensionDirectory");
-        $fileNames = $this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.txt$/", true, false);
-        if (!is_array_empty($fileNames)) {
-            $fileNameLatest = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("updateLatestFile");
-            $fileData = $this->yellow->toolbox->readFile($fileNameLatest);
-            $settings = $this->yellow->toolbox->getTextSettings($fileData, "extension");
-            foreach ($fileNames as $fileName) {
-                $extension = $this->yellow->lookup->normaliseName(basename($fileName), true, true);
-                if ($settings->isExisting($extension) &&
-                    !$this->yellow->toolbox->deleteFile($fileName, $this->yellow->system->get("coreTrashDirectory"))) {
-                    $this->yellow->toolbox->log("error", "Can't delete file '$fileName'!");
-                }
-                if ($settings->isExisting($extension)) $patch = true;
-            }
-        }
         $path = $this->yellow->system->get("coreLayoutDirectory");
         foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);

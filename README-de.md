@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.97
+# Update 0.8.98
 
 Webseite auf dem neusten Stand halten.
 
@@ -92,9 +92,9 @@ Webseite in der Befehlszeile aktualisieren:
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
 `UpdateCurrentRelease` = momentan installierte Produktversion  
-`UpdateLatestUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
-`UpdateLatestFile` = Datei mit neusten Aktualisierungs-Einstellungen  
-`UpdateCurrentFile` = Datei mit aktuellen Aktualisierungs-Einstellungen  
+`UpdateAvailableUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
+`UpdateAvailableFile` = Datei mit Aktualisierungs-Einstellungen für verfügbare Erweiterungen  
+`UpdateCurrentFile` = Datei mit Aktualisierungs-Einstellungen für installierte Erweiterungen  
 `UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
@@ -102,7 +102,7 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 
 Die folgenden Dateien werden bei der Aktualisierung der Webseite geändert:
 
-`system/extensions/update-latest.ini` = Datei mit den verfügbaren Erweiterungen, [siehe neuste Datei](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-latest.ini)  
+`system/extensions/update-available.ini` = Datei mit den [verfügbaren Erweiterungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
 `system/extensions/update-current.ini` = Datei mit den installierten Erweiterungen  
 
 Die Logdatei findet man in der Datei `system/extensions/yellow-website.log`.
