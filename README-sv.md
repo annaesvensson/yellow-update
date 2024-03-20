@@ -21,7 +21,7 @@ Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://g
 Du kan använda förkortningar för att visa information om webbplatsen:
 
 `[yellow about]` för installerade tillägg  
-`[yellow release]` för aktuell produktutgåva  
+`[yellow release]` för installerad produktutgåva  
 `[yellow log]` för senaste poster i loggfilen  
 
 ## Hur man uppdaterar en webbplats
@@ -43,12 +43,12 @@ Innehållsfil med installerade tillägg:
 
     ! [yellow about]
 
-Innehållsfil med aktuell produktutgåva:
+Innehållsfil med installerad produktutgåva:
 
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar aktuella produktutgåvan.
+    Den här sidan visar installerad produktutgåvan.
 
     ! [yellow release]
 
@@ -91,7 +91,7 @@ Uppdatera webbplats på kommandoraden:
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
 
-`UpdateCurrentRelease` = för närvarande installerad produktversion  
+`UpdateCurrentRelease` = installerad produktversion  
 `UpdateAvailableUrl` = URL med uppdateringar, `auto` för automatisk detektering  
 `UpdateAvailableFile` = fil med uppdateringsinställningar för tillgängliga tillägg  
 `UpdateCurrentFile` = fil med uppdateringsinställningar för installerade tillägg  

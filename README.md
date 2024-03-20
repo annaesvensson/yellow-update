@@ -21,7 +21,7 @@ You can show the current version of your website in a [web browser](https://gith
 You can use shortcuts to show information about the website:
 
 `[yellow about]` for installed extensions  
-`[yellow release]` for current product release  
+`[yellow release]` for installed product release  
 `[yellow log]` for latest entries in log file  
 
 ## How to update a website
@@ -43,12 +43,12 @@ Content file with installed extensions:
 
     ! [yellow about]
 
-Content file with current product release:
+Content file with installed product release:
 
     ---
     Title: Example page
     ---
-    This page shows the current product release.
+    This page shows the installed product release.
 
     ! [yellow release]
 
@@ -91,7 +91,7 @@ Updating website at the command line:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`UpdateCurrentRelease` = currently installed product release  
+`UpdateCurrentRelease` = installed product release  
 `UpdateAvailableUrl` = URL with updates, `auto` for automatic detection  
 `UpdateAvailableFile` = file with update settings for available extensions  
 `UpdateCurrentFile` = file with update settings for installed extensions  

@@ -21,7 +21,7 @@ Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.co
 Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen:
 
 `[yellow about]` für installierte Erweiterungen  
-`[yellow release]` für aktuelle Produktversion  
+`[yellow release]` für installierte Produktversion  
 `[yellow log]` für neueste Einträge in der Logdatei  
 
 ## Wie man eine Webseite aktualisiert
@@ -43,12 +43,12 @@ Inhaltsdatei mit installierten Erweiterungen:
 
     ! [yellow about]
 
-Inhaltsdatei mit aktueller Produktversion:
+Inhaltsdatei mit installierter Produktversion:
 
     ---
     Title: Beispiel-Seite
     ---
-    Diese Seite zeigt die aktuelle Produktversion.
+    Diese Seite zeigt die installierte Produktversion.
 
     ! [yellow release]
 
@@ -91,7 +91,7 @@ Webseite in der Befehlszeile aktualisieren:
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
-`UpdateCurrentRelease` = momentan installierte Produktversion  
+`UpdateCurrentRelease` = installierte Produktversion  
 `UpdateAvailableUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
 `UpdateAvailableFile` = Datei mit Aktualisierungs-Einstellungen für verfügbare Erweiterungen  
 `UpdateCurrentFile` = Datei mit Aktualisierungs-Einstellungen für installierte Erweiterungen  
