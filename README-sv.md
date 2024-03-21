@@ -21,7 +21,7 @@ Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://g
 Du kan använda förkortningar för att visa information om webbplatsen:
 
 `[yellow about]` för installerade tillägg  
-`[yellow release]` för installerad produktutgåva  
+`[yellow release]` för installerad produktversion  
 `[yellow log]` för senaste poster i loggfilen  
 
 ## Hur man uppdaterar en webbplats
@@ -39,16 +39,16 @@ Innehållsfil med installerade tillägg:
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar installerade tillägg.
+    Den här sidan visar de installerade tilläggen.
 
     ! [yellow about]
 
-Innehållsfil med installerad produktutgåva:
+Innehållsfil med installerad produktversion:
 
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar installerad produktutgåvan.
+    Den här sidan visar den installerade produktversionen.
 
     ! [yellow release]
 
