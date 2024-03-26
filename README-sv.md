@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.98
+# Update 0.8.99
 
 Håll din webbplats uppdaterad.
 
@@ -102,7 +102,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 
 Följande filer kommer att ändras när webbplatsen uppdateras:
 
-`system/extensions/update-available.ini` = fil med [tillgängliga tillägg](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
+`system/extensions/update-available.ini` = [fil med tillgängliga tillägg](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
 `system/extensions/update-current.ini` = fil med installerade tillägg  
 
 Loggfilen finns i filen `system/extensions/yellow-website.log`.

@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.98
+# Update 0.8.99
 
 Keep your website up to date.
 
@@ -102,7 +102,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 The following files will be modified when the website is updated:
 
-`system/extensions/update-available.ini` = file with [available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
+`system/extensions/update-available.ini` = [file with available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
 `system/extensions/update-current.ini` = file with installed extensions  
 
 The log file can be found in file `system/extensions/yellow-website.log`.
