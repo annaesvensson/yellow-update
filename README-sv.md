@@ -99,10 +99,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateEventDaily` = tid för nästa dagliga händelse  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
-Följande filer kommer att ändras när webbplatsen uppdateras:
-
-`system/extensions/update-available.ini` = [fil med tillgängliga tillägg](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
-`system/extensions/yellow-extension.ini` = fil med installerade tillägg  
+[Uppdateringsinformationen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns i filen `system/extensions/update-available.ini`.
 
 Loggfilen finns i filen `system/extensions/yellow-website.log`.
 

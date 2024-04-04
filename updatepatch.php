@@ -21,7 +21,7 @@ class YellowUpdatePatch {
             $this->checkDatenstromYellow0820();
             $this->checkDatenstromYellow0821();
             $this->checkDatenstromYellow0822();
-            $this->checkDatenstromYellow091();
+            $this->checkDatenstromYellow09();
         }
     }
     
@@ -263,10 +263,10 @@ class YellowUpdatePatch {
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.22");
     }
 
-    // Check patches for Datenstrom Yellow 0.9.1
-    public function checkDatenstromYellow091() {
+    // Check patches for Datenstrom Yellow 0.9
+    public function checkDatenstromYellow09() {
         $patch = false;
-        if (is_file("system/workers/core.php")) {
+        if (is_file("system/workers/core.php") && is_file("system/workers/update.php")) {
             $fileName = "yellow.php";
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileName);
             $fileDataNew = str_replace("system/extensions/core.php", "system/workers/core.php", $fileDataNew);
@@ -275,6 +275,6 @@ class YellowUpdatePatch {
             }
             if ($fileData!=$fileDataNew) $patch = true;
         }
-        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.9.1");
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.9");
     }
 }
