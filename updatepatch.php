@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.8.22";
+    const VERSION = "0.9.1";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -21,6 +21,7 @@ class YellowUpdatePatch {
             $this->checkDatenstromYellow0820();
             $this->checkDatenstromYellow0821();
             $this->checkDatenstromYellow0822();
+            $this->checkDatenstromYellow091();
         }
     }
     
@@ -260,5 +261,20 @@ class YellowUpdatePatch {
             if ($fileData!=$fileDataNew) $patch = true;
         }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.22");
+    }
+
+    // Check patches for Datenstrom Yellow 0.9.1
+    public function checkDatenstromYellow091() {
+        $patch = false;
+        if (is_file("system/workers/core.php")) {
+            $fileName = "yellow.php";
+            $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileName);
+            $fileDataNew = str_replace("system/extensions/core.php", "system/workers/core.php", $fileDataNew);
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($fileName, $fileDataNew)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
+            }
+            if ($fileData!=$fileDataNew) $patch = true;
+        }
+        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.9.1");
     }
 }

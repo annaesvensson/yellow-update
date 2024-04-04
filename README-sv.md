@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.8.101
+# Update 0.9.1
 
 Håll din webbplats uppdaterad.
 
@@ -94,7 +94,6 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateCurrentRelease` = installerad produktversion  
 `UpdateAvailableUrl` = URL med uppdateringar, `auto` för automatisk detektering  
 `UpdateAvailableFile` = fil med uppdateringsinställningar för tillgängliga tillägg  
-`UpdateCurrentFile` = fil med uppdateringsinställningar för installerade tillägg  
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
@@ -103,7 +102,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 Följande filer kommer att ändras när webbplatsen uppdateras:
 
 `system/extensions/update-available.ini` = [fil med tillgängliga tillägg](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini)  
-`system/extensions/update-current.ini` = fil med installerade tillägg  
+`system/extensions/yellow-extension.ini` = fil med installerade tillägg  
 
 Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
