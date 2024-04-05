@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.1
+# Update 0.9.2
 
 Webseite auf dem neusten Stand halten.
 
@@ -22,7 +22,7 @@ Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen
 
 `[yellow about]` für installierte Erweiterungen  
 `[yellow release]` für installierte Produktversion  
-`[yellow log]` für neueste Einträge in der Logdatei  
+`[yellow log]` für neueste Einträge in der Logdatei `system/extensions/yellow-website.log`  
 
 ## Wie man eine Webseite aktualisiert
 
@@ -100,8 +100,6 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
 Die [Aktualisierungsinformationen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man in der Datei `system/extensions/update-available.ini`.
-
-Die Logdatei findet man in der Datei `system/extensions/yellow-website.log`.
 
 ## Danksagung
 

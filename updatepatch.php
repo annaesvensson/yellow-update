@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.1";
+    const VERSION = "0.9.2";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -178,15 +178,15 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.8.19
     public function checkDatenstromYellow0819() {
         $patch = false;
-        $fileNameOld = $this->yellow->system->get("coreExtensionDirectory")."yellow.log";
-        $fileNameNew = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreWebsiteFile");
-        if (is_file($fileNameOld)) {
-            $fileDataOld = $this->yellow->toolbox->readFile($fileNameOld);
-            $fileDataNew = $this->yellow->toolbox->readFile($fileNameNew);
-            if (!$this->yellow->toolbox->deleteFile($fileNameOld, $this->yellow->system->get("coreTrashDirectory"))) {
-                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameOld'!");
-            } elseif (!$this->yellow->toolbox->createFile($fileNameNew, $fileDataOld.$fileDataNew)) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileNameNew'!");
+        $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."yellow.log";
+        $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreWebsiteFile");
+        if (is_file($fileNameSource)) {
+            $fileData = $this->yellow->toolbox->readFile($fileNameSource);
+            $fileDataNew = $this->yellow->toolbox->readFile($fileNameDestination);
+            if (!$this->yellow->toolbox->deleteFile($fileNameSource, $this->yellow->system->get("coreTrashDirectory"))) {
+                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameSource'!");
+            } elseif (!$this->yellow->toolbox->createFile($fileNameDestination, $fileData.$fileDataNew)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             $patch = true;
         }
@@ -266,7 +266,13 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.9
     public function checkDatenstromYellow09() {
         $patch = false;
-        if (is_file("system/workers/core.php") && is_file("system/workers/update.php")) {
+        if (is_file("system/extensions/updatepatch.bin") && is_file("system/workers/updatepatch.bin")) {
+            $fileNameObsolete = "system/extensions/updatepatch.bin";
+            if (substru(__DIR__, -7)=="workers" && !$this->yellow->toolbox->deleteFile($fileNameObsolete)) {
+                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
+            }
+        }
+        if (is_file("system/extensions/core.php") && is_file("system/workers/core.php")) {
             $fileName = "yellow.php";
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileName);
             $fileDataNew = str_replace("system/extensions/core.php", "system/workers/core.php", $fileDataNew);
@@ -274,6 +280,33 @@ class YellowUpdatePatch {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
+            $pathSource = "system/extensions/";
+            $pathDestination = "system/workers/";
+            foreach ($this->yellow->toolbox->getDirectoryEntries($pathSource, "/^.*$/", true, false, false) as $entry) {
+                if (!preg_match("/\.(php|js|css|gif|jpg|png|svg|json|woff|woff2)$/", $entry)) continue;
+                $fileNameSource = $pathSource.$entry;
+                $fileNameDestination = $pathDestination.$entry;
+                if (is_file($fileNameDestination)) {
+                    if (!$this->yellow->toolbox->deleteFile($fileNameSource, $this->yellow->system->get("coreTrashDirectory"))) {
+                        $this->yellow->toolbox->log("error", "Can't delete file '$fileNameSource'!");
+                    }
+                } else {
+                    if (!$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
+                        $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+                    }
+                }
+                $patch = true;
+            }
+            $fileNameObsolete = $this->yellow->system->get("coreExtensionDirectory")."update-latest.ini";
+            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-current.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-extension.ini";
+            if (is_file($fileNameObsolete) && !$this->yellow->toolbox->deleteFile($fileNameObsolete)) {
+                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
+            }
+            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
+                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
         }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.9");
     }

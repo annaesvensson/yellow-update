@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.1
+# Update 0.9.2
 
 Håll din webbplats uppdaterad.
 
@@ -22,7 +22,7 @@ Du kan använda förkortningar för att visa information om webbplatsen:
 
 `[yellow about]` för installerade tillägg  
 `[yellow release]` för installerad produktversion  
-`[yellow log]` för senaste poster i loggfilen  
+`[yellow log]` för senaste poster i loggfilen `system/extensions/yellow-website.log`  
 
 ## Hur man uppdaterar en webbplats
 
@@ -100,8 +100,6 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
 [Uppdateringsinformationen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns i filen `system/extensions/update-available.ini`.
-
-Loggfilen finns i filen `system/extensions/yellow-website.log`.
 
 ## Tack
 

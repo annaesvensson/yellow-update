@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.1
+# Update 0.9.2
 
 Keep your website up to date.
 
@@ -22,7 +22,7 @@ You can use shortcuts to show information about the website:
 
 `[yellow about]` for installed extensions  
 `[yellow release]` for installed product release  
-`[yellow log]` for latest entries in log file  
+`[yellow log]` for latest entries in log file `system/extensions/yellow-website.log`  
 
 ## How to update a website
 
@@ -100,8 +100,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
 The [update information](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found in file `system/extensions/update-available.ini`.
-
-The log file can be found in file `system/extensions/yellow-website.log`.
 
 ## Acknowledgements
 
