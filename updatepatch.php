@@ -266,20 +266,7 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.9
     public function checkDatenstromYellow09() {
         $patch = false;
-        if (is_file("system/extensions/updatepatch.bin") && is_file("system/workers/updatepatch.bin")) {
-            $fileNameObsolete = "system/extensions/updatepatch.bin";
-            if (substru(__DIR__, -7)=="workers" && !$this->yellow->toolbox->deleteFile($fileNameObsolete)) {
-                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
-            }
-        }
-        if (is_file("system/extensions/core.php") && is_file("system/workers/core.php")) {
-            $fileName = "yellow.php";
-            $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileName);
-            $fileDataNew = str_replace("system/extensions/core.php", "system/workers/core.php", $fileDataNew);
-            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($fileName, $fileDataNew)) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
-            }
-            if ($fileData!=$fileDataNew) $patch = true;
+        if (is_file("system/extensions/update.php") && is_file("system/workers/update.php")) {
             $pathSource = "system/extensions/";
             $pathDestination = "system/workers/";
             foreach ($this->yellow->toolbox->getDirectoryEntries($pathSource, "/^.*$/", true, false, false) as $entry) {
@@ -295,7 +282,6 @@ class YellowUpdatePatch {
                         $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
                     }
                 }
-                $patch = true;
             }
             $fileNameObsolete = $this->yellow->system->get("coreExtensionDirectory")."update-latest.ini";
             $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-current.ini";
@@ -307,6 +293,7 @@ class YellowUpdatePatch {
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
+            $patch = true;
         }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.9");
     }
