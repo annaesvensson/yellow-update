@@ -266,6 +266,17 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.9
     public function checkDatenstromYellow09() {
         $patch = false;
+        if (is_file("system/extensions/core.php") && is_file("system/workers/core.php")) {
+            $path = "system/extensions/";
+            foreach ($this->yellow->toolbox->getDirectoryEntries($path, "/^.*$/", true, false, false) as $entry) {
+                if (in_array($entry, array("core.php", "update-latest.ini"))) {
+                    $fileNameObsolete = $path.$entry;
+                    if (!$this->yellow->toolbox->deleteFile($fileNameObsolete, $this->yellow->system->get("coreTrashDirectory"))) {
+                        $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
+                    }
+                }
+            }
+        }
         if (is_file("system/extensions/update.php") && is_file("system/workers/update.php")) {
             $pathSource = "system/extensions/";
             $pathDestination = "system/workers/";
@@ -283,12 +294,8 @@ class YellowUpdatePatch {
                     }
                 }
             }
-            $fileNameObsolete = $this->yellow->system->get("coreExtensionDirectory")."update-latest.ini";
             $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-current.ini";
             $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-extension.ini";
-            if (is_file($fileNameObsolete) && !$this->yellow->toolbox->deleteFile($fileNameObsolete)) {
-                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
-            }
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
