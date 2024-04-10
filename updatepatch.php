@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.2";
+    const VERSION = "0.9.3";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -35,7 +35,7 @@ class YellowUpdatePatch {
                 $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileNameSource);
                 $fileDataNew = str_replace("language.ini", "yellow-language.ini", $fileDataNew);
                 $fileDataNew = str_replace("user.ini", "yellow-user.ini", $fileDataNew);
-                if (!$this->yellow->toolbox->createFile($fileNameDestination, $fileDataNew)) {
+                if (!$this->yellow->toolbox->writeFile($fileNameDestination, $fileDataNew)) {
                     $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
                 }
             }
@@ -82,7 +82,7 @@ class YellowUpdatePatch {
             $fileDataNew = str_replace("\$page = \$this->yellow->content->shared(\"sidebar\")", "\$page = null", $fileDataNew);
             $fileDataNew = str_replace("\$this->yellow->content->shared(\"sidebar\")", "\$this->yellow->page->isPage(\"sidebar\")", $fileDataNew);
             $fileDataNew = str_replace("php if (\$page = null)", "php /* Remove this line */ if (\$page = null)", $fileDataNew);
-            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
@@ -156,7 +156,7 @@ class YellowUpdatePatch {
                 $fileDataNew = str_replace("[blogarchive", "[blogmonths", $fileDataNew);
                 $fileDataNew = preg_replace("/Layout: blogpages/i", "Layout: blog-start", $fileDataNew);
                 $fileDataNew = preg_replace("/Layout: wikipages/i", "Layout: wiki-start", $fileDataNew);
-                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                     $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
@@ -166,7 +166,7 @@ class YellowUpdatePatch {
                 $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
                 $fileDataNew = str_replace("yellow->page->getPage(\"blog\")", "yellow->page->getPage(\"blogStart\")", $fileDataNew);
                 $fileDataNew = str_replace("yellow->page->getPage(\"wiki\")", "yellow->page->getPage(\"wikiStart\")", $fileDataNew);
-                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                     $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
@@ -185,7 +185,7 @@ class YellowUpdatePatch {
             $fileDataNew = $this->yellow->toolbox->readFile($fileNameDestination);
             if (!$this->yellow->toolbox->deleteFile($fileNameSource, $this->yellow->system->get("coreTrashDirectory"))) {
                 $this->yellow->toolbox->log("error", "Can't delete file '$fileNameSource'!");
-            } elseif (!$this->yellow->toolbox->createFile($fileNameDestination, $fileData.$fileDataNew)) {
+            } elseif (!$this->yellow->toolbox->writeFile($fileNameDestination, $fileData.$fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             $patch = true;
@@ -204,7 +204,7 @@ class YellowUpdatePatch {
                 $fileDataNew = preg_replace("/\[gallery\s+(\S+)\s+(\-)\s+([\d\.\%]+)/i", "[gallery $1 name zoom $3", $fileDataNew);
                 $fileDataNew = preg_replace("/\[slider\s+(\S+)\s+(loop|fade|slide)/i", "[slider $1 name $2", $fileDataNew);
                 $fileDataNew = preg_replace("/\[slider\s+(\S+)\s+(\-)\s+([\d\.\%]+)/i", "[slider $1 name loop $3", $fileDataNew);
-                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                     $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
@@ -229,7 +229,7 @@ class YellowUpdatePatch {
             foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.(md|txt)$/", true, false) as $entry) {
                 $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
                 $fileDataNew = str_replace("[blogchanges", "[blogpages", $fileDataNew);
-                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+                if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                     $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
                 }
                 if ($fileData!=$fileDataNew) $patch = true;
@@ -239,7 +239,7 @@ class YellowUpdatePatch {
         foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
             $fileDataNew = str_replace("yellow->toolbox->normaliseArguments(", "yellow->lookup->normaliseArguments(", $fileDataNew);
-            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
@@ -255,7 +255,7 @@ class YellowUpdatePatch {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
             $fileDataNew = str_replace("yellow->page->getContent(", "yellow->page->getContentHtml(", $fileDataNew);
             $fileDataNew = str_replace("yellow->page->getExtra(", "yellow->page->getExtraHtml(", $fileDataNew);
-            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->createFile($entry, $fileDataNew)) {
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$entry'!");
             }
             if ($fileData!=$fileDataNew) $patch = true;
