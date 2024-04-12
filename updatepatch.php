@@ -267,12 +267,12 @@ class YellowUpdatePatch {
     // Check patches for Datenstrom Yellow 0.8.23
     public function checkDatenstromYellow0823() {
         $patch = false;
-        $fileNameObsolete = "system/extensions/command.php";
-        if (is_file($fileNameObsolete)) {
-            if (!$this->yellow->toolbox->deleteFile($fileNameObsolete, $this->yellow->system->get("coreTrashDirectory"))) {
-                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
+        if (is_file("system/extensions/command.php") && $this->yellow->extension->isExisting("update")) {
+            list($dummy, $settingsCurrent) = $this->yellow->extension->get("update")->getExtensionSettings(true);
+            if ($settingsCurrent->isExisting("command")) {
+                $this->yellow->extension->get("update")->removeExtensionArchive("command", "uninstall", $settingsCurrent["command"]);
+                $patch = true;
             }
-            $patch = true;
         }
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.23");
     }
