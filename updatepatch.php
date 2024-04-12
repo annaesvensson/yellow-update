@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.3";
+    const VERSION = "0.9.4";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -21,7 +21,6 @@ class YellowUpdatePatch {
             $this->checkDatenstromYellow0820();
             $this->checkDatenstromYellow0821();
             $this->checkDatenstromYellow0822();
-            $this->checkDatenstromYellow0823();
             $this->checkDatenstromYellow09();
         }
     }
@@ -264,19 +263,6 @@ class YellowUpdatePatch {
         if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.22");
     }
 
-    // Check patches for Datenstrom Yellow 0.8.23
-    public function checkDatenstromYellow0823() {
-        $patch = false;
-        if (is_file("system/extensions/command.php") && $this->yellow->extension->isExisting("update")) {
-            list($dummy, $settingsCurrent) = $this->yellow->extension->get("update")->getExtensionSettings(true);
-            if ($settingsCurrent->isExisting("command")) {
-                $this->yellow->extension->get("update")->removeExtensionArchive("command", "uninstall", $settingsCurrent["command"]);
-                $patch = true;
-            }
-        }
-        if ($patch) $this->yellow->toolbox->log("info", "Apply patches for Datenstrom Yellow 0.8.23");
-    }
-
     // Check patches for Datenstrom Yellow 0.9
     public function checkDatenstromYellow09() {
         $patch = false;
@@ -313,6 +299,17 @@ class YellowUpdatePatch {
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
+            $fileData = $fileDataNew = $this->yellow->toolbox->readFile($fileNameDestination);
+            $fileDataNew = str_replace("system/extensions/", "system/workers/", $fileDataNew);
+            if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($fileNameDestination, $fileDataNew)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
+            if ($this->yellow->extension->isExisting("update") && is_file("system/workers/command.php")) {
+                $this->yellow->extension->get("update")->removeExtensionFile("system/workers/command.php");
+                $this->yellow->extension->get("update")->updateExtensionSettings("command", "uninstall");
+                $this->yellow->extension->get("update")->updateSystemSettings("command", "uninstall");
+                $this->yellow->extension->get("update")->updateLanguageSettings("command", "uninstall");
             }
             $patch = true;
         }
