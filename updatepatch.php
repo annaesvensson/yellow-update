@@ -281,7 +281,7 @@ class YellowUpdatePatch {
             $pathSource = "system/extensions/";
             $pathDestination = "system/workers/";
             foreach ($this->yellow->toolbox->getDirectoryEntries($pathSource, "/^.*$/", true, false, false) as $entry) {
-                if (!preg_match("/\.(php|js|css|gif|jpg|png|svg|json|woff|woff2)$/", $entry)) continue;
+                if (!preg_match("/\.(php|js|css|gif|jpeg|jpg|png|svg|json|woff|woff2)$/", $entry)) continue;
                 $fileNameSource = $pathSource.$entry;
                 $fileNameDestination = $pathDestination.$entry;
                 if (is_file($fileNameDestination)) {
@@ -305,11 +305,15 @@ class YellowUpdatePatch {
             if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($fileNameDestination, $fileDataNew)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
-            if ($this->yellow->extension->isExisting("update") && is_file("system/workers/command.php")) {
-                $this->yellow->extension->get("update")->removeExtensionFile("system/workers/command.php");
-                $this->yellow->extension->get("update")->updateExtensionSettings("command", "uninstall");
-                $this->yellow->extension->get("update")->updateSystemSettings("command", "uninstall");
-                $this->yellow->extension->get("update")->updateLanguageSettings("command", "uninstall");
+            $fileNameObsolete = "system/workers/command.php";
+            if ($this->yellow->extension->isExisting("update") && is_file($fileNameObsolete)) {
+                if ($this->yellow->extension->get("update")->removeExtensionFile($fileNameObsolete)==200) {
+                    $this->yellow->extension->get("update")->updateExtensionSettings("command", "uninstall");
+                    $this->yellow->extension->get("update")->updateSystemSettings("command", "uninstall");
+                    $this->yellow->extension->get("update")->updateLanguageSettings("command", "uninstall");
+                } else {
+                    $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
+                }
             }
             $patch = true;
         }
