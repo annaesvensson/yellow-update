@@ -99,7 +99,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateEventDaily` = time of next daily event  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
-The [update information](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found in file `system/extensions/update-available.ini`.
+The [update settings](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found in file `system/extensions/update-available.ini`.
 
 ## Acknowledgements
 
