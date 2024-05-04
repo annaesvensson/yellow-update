@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.4";
+    const VERSION = "0.9.5";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -253,6 +253,7 @@ class YellowUpdatePatch {
         $path = $this->yellow->system->get("coreLayoutDirectory");
         foreach ($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/^.*\.html$/", true, false) as $entry) {
             $fileData = $fileDataNew = $this->yellow->toolbox->readFile($entry);
+            $fileDataNew = preg_replace("/getPage\((\"\w+\")\)->getContent\(/", "getPage($1)->getContentHtml(", $fileDataNew);
             $fileDataNew = str_replace("yellow->page->getContent(", "yellow->page->getContentHtml(", $fileDataNew);
             $fileDataNew = str_replace("yellow->page->getExtra(", "yellow->page->getExtraHtml(", $fileDataNew);
             if ($fileData!=$fileDataNew && !$this->yellow->toolbox->writeFile($entry, $fileDataNew)) {
