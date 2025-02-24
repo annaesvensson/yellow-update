@@ -10,7 +10,7 @@ Håll din webbplats uppdaterad.
 
 Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Du kan också installera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
 
-Du kan hitta [tillägg på officiella webbplatsen](https://datenstrom.se/yellow/extensions/), experimentella tillägg på [GitHub](https://github.com/topics/datenstrom-yellow) och [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
+Du kan hitta [tillägg på officiella webbplatsen](https://datenstrom.se/sv/yellow/extensions/), experimentella tillägg på [GitHub](https://github.com/topics/datenstrom-yellow) och [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
 
 ## Hur man avinstallerar tillägg
 
