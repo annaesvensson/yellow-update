@@ -95,14 +95,14 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 
 `UpdateCurrentRelease` = installierte Produktversion  
 `UpdateAvailableUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
-`UpdateAvailableFile` = Datei mit Aktualisierungs-Einstellungen für verfügbare Erweiterungen  
-`UpdateInstalledFile` = Datei mit Aktualisierungs-Einstellungen für installierte Erweiterungen  
-`UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
+`UpdateAvailableFile` = Datei mit Aktualisierungseinstellungen für verfügbare Erweiterungen  
+`UpdateInstalledFile` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
+`UpdateExtensionFile` = Datei mit Erweiterungseinstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
-Die [Aktualisierungseinstellungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man in der Datei `system/extensions/update-available.ini`.
+Die [Aktualisierungseinstellungen für verfügbare Erweiterung](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auch auf GitHub.
 
 ## Danksagung
 
