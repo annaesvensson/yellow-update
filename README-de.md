@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.4
+# Update 0.9.5
 
 Webseite auf dem neusten Stand halten.
 
@@ -96,6 +96,7 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateCurrentRelease` = installierte Produktversion  
 `UpdateAvailableUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
 `UpdateAvailableFile` = Datei mit Aktualisierungs-Einstellungen für verfügbare Erweiterungen  
+`UpdateInstalledFile` = Datei mit Aktualisierungs-Einstellungen für installierte Erweiterungen  
 `UpdateExtensionFile` = Datei mit Erweiterungs-Einstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  

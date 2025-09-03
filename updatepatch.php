@@ -296,7 +296,7 @@ class YellowUpdatePatch {
                 }
             }
             $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-current.ini";
-            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-extension.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
@@ -315,6 +315,15 @@ class YellowUpdatePatch {
                 } else {
                     $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
                 }
+            }
+            $patch = true;
+        }
+        if ($this->yellow->system->isExisting("coreExtensionFile")) {
+            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreExtensionFile");
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
+            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
+                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             $patch = true;
         }

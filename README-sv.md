@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.4
+# Update 0.9.5
 
 Håll din webbplats uppdaterad.
 
@@ -96,6 +96,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateCurrentRelease` = installerad produktversion  
 `UpdateAvailableUrl` = URL med uppdateringar, `auto` för automatisk detektering  
 `UpdateAvailableFile` = fil med uppdateringsinställningar för tillgängliga tillägg  
+`UpdateInstalledFile` = fil med uppdateringsinställningar för installerade tillägg  
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
