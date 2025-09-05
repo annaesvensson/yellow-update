@@ -102,7 +102,7 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
-Die [Aktualisierungseinstellungen für verfügbare Erweiterung](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auch auf GitHub.
+Die [Aktualisierungseinstellungen für verfügbare Erweiterungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auch auf GitHub.
 
 ## Danksagung
 
