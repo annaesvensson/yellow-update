@@ -43,7 +43,7 @@ Innehållsfil med installerade tillägg:
     ---
     Den här sidan visar de installerade tilläggen.
 
-    ! {.note}
+    ! {.important}
     ! [yellow about]
 
 Innehållsfil med installerad produktversion:
@@ -53,7 +53,7 @@ Innehållsfil med installerad produktversion:
     ---
     Den här sidan visar den installerade produktversionen.
 
-    ! {.note}
+    ! {.important}
     ! [yellow release]
 
 Innehållsfil med loggfil:
@@ -63,7 +63,7 @@ Innehållsfil med loggfil:
     ---
     Den här sidan visar de senaste posterna i loggfilen.
 
-    ! {.note}
+    ! {.important}
     ! [yellow log]
 
 Installera tillägg på kommandoraden:

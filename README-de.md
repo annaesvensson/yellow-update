@@ -43,7 +43,7 @@ Inhaltsdatei mit installierten Erweiterungen:
     ---
     Diese Seite zeigt die installierten Erweiterungen.
 
-    ! {.note}
+    ! {.important}
     ! [yellow about]
 
 Inhaltsdatei mit installierter Produktversion:
@@ -53,7 +53,7 @@ Inhaltsdatei mit installierter Produktversion:
     ---
     Diese Seite zeigt die installierte Produktversion.
 
-    ! {.note}
+    ! {.important}
     ! [yellow release]
 
 Inhaltsdatei mit Logdatei:
@@ -63,7 +63,7 @@ Inhaltsdatei mit Logdatei:
     ---
     Diese Seite zeigt die neuesten Einträge in der Logdatei.
 
-    ! {.note}
+    ! {.important}
     ! [yellow log]
 
 Erweiterungen in der Befehlszeile installieren:

@@ -43,7 +43,7 @@ Content file with installed extensions:
     ---
     This page shows the installed extensions.
 
-    ! {.note}
+    ! {.important}
     ! [yellow about]
 
 Content file with installed product release:
@@ -53,7 +53,7 @@ Content file with installed product release:
     ---
     This page shows the installed product release.
 
-    ! {.note}
+    ! {.important}
     ! [yellow release]
 
 Content file with log file:
@@ -63,7 +63,7 @@ Content file with log file:
     ---
     This page shows the latest entries in log file.
 
-    ! {.note}
+    ! {.important}
     ! [yellow log]
 
 Installing extensions at the command line:
