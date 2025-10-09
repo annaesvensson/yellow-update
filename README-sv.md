@@ -78,9 +78,10 @@ Avinstallera tillägg på kommandoraden:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Visa uppdateringar på kommandoraden:
+Uppdatera tillägg på kommandoraden:
  
 `php yellow.php update`  
+`php yellow.php update all`  
 
 Visa tillägg på kommandoraden:
  

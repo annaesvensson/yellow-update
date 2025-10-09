@@ -78,9 +78,10 @@ Uninstalling extensions at the command line:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Showing updates at the command line:
+Updating extensions at the command line:
 
-`php yellow.php update`
+`php yellow.php update`  
+`php yellow.php update all`  
 
 Showing extensions at the command line:
  

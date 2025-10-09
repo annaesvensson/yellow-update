@@ -16,7 +16,7 @@ Du findest [verfügbare Erweiterungen auf der Webseite](https://datenstrom.se/de
 
 Du kannst Erweiterungen als PHP-Dateien manuell entfernen. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) deinstallieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php uninstall` gefolgt von weiteren Argumenten.
 
-## Wie man eine Erweiterungen aktualisiert
+## Wie man Erweiterungen aktualisiert
 
 Die erste Möglichkeit besteht darin, Erweiterungen im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) zu aktualisieren. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen und suche nach Aktualisierungen. Deine Webseite zeigt an, ob Aktualisierungen verfügbar sind. Du benötigst Update-Rechte, um Erweiterungen zu aktualisieren. Alle Benutzerkonten werden in der Datei `system/extensions/yellow-user.ini` gespeichert.
 
@@ -78,9 +78,10 @@ Erweiterungen in der Befehlszeile deinstallieren:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
-Aktualisierungen in der Befehlszeile anzeigen:
+Erweiterungen in der Befehlszeile aktualisieren:
  
 `php yellow.php update`  
+`php yellow.php update all`  
 
 Erweiterungen in der Befehlszeile anzeigen:
  
