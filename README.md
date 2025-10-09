@@ -16,6 +16,14 @@ You can find [available extensions on the website](https://datenstrom.se/yellow/
 
 You can manually remove extensions as PHP files. You can also uninstall extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php uninstall` followed by more arguments.
 
+## How to update extensions
+
+The first option is to update extensions in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings and check for updates. Your website will show if updates are available. You need to have update rights to update extensions. All user accounts are stored in file `system/extensions/yellow-user.ini`. 
+
+The second option is to update extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php update`. This will show if updates are available. To update all extensions type `php yellow.php update all`. You can optionally add the name of an extension. 
+
+If files are deleted you can find them in the `system/trash` folder.
+
 ## How to show extensions
 
 You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can also show the current version at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. 
@@ -25,14 +33,6 @@ You can use shortcuts to show information about the website:
 `[yellow about]` for installed extensions  
 `[yellow release]` for installed product release  
 `[yellow log]` for latest entries in log file `system/extensions/yellow-website.log`  
-
-## How to update a website
-
-The first option is to update your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings and check for updates. Your website will show if updates are available. You need to have update rights to update a website. All user accounts are stored in file `system/extensions/yellow-user.ini`. 
-
-The second option is to update your website at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php update`. This will show if updates are available. To update your website type `php yellow.php update all`. You can optionally add the name of an extension. 
-
-If files are deleted you can find them in the `system/trash` folder.
 
 ## Examples
 
@@ -78,19 +78,15 @@ Uninstalling extensions at the command line:
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
 
+Showing updates at the command line:
+
+`php yellow.php update`
+
 Showing extensions at the command line:
  
 `php yellow.php about`  
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
-
-Showing updates at the command line:
-
-`php yellow.php update`
-
-Updating website at the command line:
- 
-`php yellow.php update all`  
 
 ## Settings
 
