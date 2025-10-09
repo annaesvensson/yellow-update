@@ -10,7 +10,7 @@ Keep your website up to date.
 
 You can download extensions as ZIP files and copy them into your `system/extensions` folder. Do not unzip ZIP files, leave them unchanged. Open your website in a web browser and click "Reload". You can also install extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php install` followed by more arguments.
 
-You can find [extensions on the official website](https://datenstrom.se/yellow/extensions/), experimental extensions on [GitHub](https://github.com/topics/datenstrom-yellow) and [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
+You can find [available extensions on the website](https://datenstrom.se/yellow/extensions/), [experimental extensions on GitHub](https://github.com/topics/datenstrom-yellow) and [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
 
 ## How to uninstall extensions
 
