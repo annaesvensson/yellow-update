@@ -12,15 +12,15 @@ Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensi
 
 Du kan hitta [tillgängliga tillägg på webbplatsen](https://datenstrom.se/sv/yellow/extensions/), [experimentella tillägg på GitHub](https://github.com/topics/datenstrom-yellow) och [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
 
-## Hur man avinstallerar tillägg
-
-Du kan manuellt ta bort tillägg som PHP-filer. Du kan också avinstallera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
-
 ## Hur man uppdaterar tillägg
 
 Det första alternativet är att uppdatera tillägg i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna och leta efter uppdateringar. Din webbplats kommer att visas om uppdateringar är tillgängliga. Du måste ha uppdateringsrättigheter för att uppdatera tillägg. Alla användarkonton lagras i filen `system/extensions/yellow-user.ini`.
 
 Det andra alternativet är att uppdatera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera alla tillägg skriv `php yellow.php update all`. Du kan eventuellt lägga till namnet på ett tillägg.
+
+## Hur man avinstallerar tillägg
+
+Du kan manuellt ta bort tillägg som PHP-filer. Du kan också avinstallera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php uninstall` följt av fler argument.
 
 Om filer raderas kan du hitta dem i `system/trash` mappen. 
 
@@ -72,16 +72,17 @@ Installera tillägg på kommandoraden:
 `php yellow.php install gallery`  
 `php yellow.php install english german swedish`  
 
+Uppdatera tillägg på kommandoraden:
+ 
+`php yellow.php update`  
+`php yellow.php update all`  
+`php yellow.php update english german swedish`  
+
 Avinstallera tillägg på kommandoraden:
 
 `php yellow.php uninstall`  
 `php yellow.php uninstall gallery`  
 `php yellow.php uninstall english german swedish`  
-
-Uppdatera tillägg på kommandoraden:
- 
-`php yellow.php update`  
-`php yellow.php update all`  
 
 Visa tillägg på kommandoraden:
  
@@ -102,7 +103,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateEventDaily` = tid för nästa dagliga händelse  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
-[Uppdateringsinställningarna för tillgängliga tillägg ](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns också på GitHub.
+[Uppdateringsinställningarna för tillgängliga tillägg ](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns på GitHub.
 
 ## Tack
 
