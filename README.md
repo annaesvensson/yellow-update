@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.5
+# Update 0.9.6
 
 Keep your website up to date.
 
@@ -31,8 +31,7 @@ You can show the current version of your website in a [web browser](https://gith
 You can use shortcuts to show information about the website:
 
 `[yellow about]` for installed extensions  
-`[yellow release]` for installed product release  
-`[yellow log]` for latest entries in log file `system/extensions/yellow-website.log`  
+`[yellow log]` for log file of the website  
 
 ## Examples
 
@@ -46,22 +45,12 @@ Content file with installed extensions:
     ! {.important}
     ! [yellow about]
 
-Content file with installed product release:
+Content file with log file of the website:
 
     ---
     Title: Example page
     ---
-    This page shows the installed product release.
-
-    ! {.important}
-    ! [yellow release]
-
-Content file with log file:
-
-    ---
-    Title: Example page
-    ---
-    This page shows the latest entries in log file.
+    This page shows the log file of the website.
 
     ! {.important}
     ! [yellow log]
@@ -90,6 +79,10 @@ Showing extensions at the command line:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 
+Showing log file at the command line:
+
+`php yellow.php log`  
+
 ## Settings
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
@@ -101,6 +94,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateExtensionFile` = file with extension settings  
 `UpdateEventPending` = pending events  
 `UpdateEventDaily` = time of next daily event  
+`UpdateLogEntries` = number of log file entries to show, 0 for unlimited  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
 The [update settings for available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found on GitHub.

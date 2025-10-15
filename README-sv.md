@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.5
+# Update 0.9.6
 
 Håll din webbplats uppdaterad.
 
@@ -31,8 +31,7 @@ Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://g
 Du kan använda förkortningar för att visa information om webbplatsen:
 
 `[yellow about]` för installerade tillägg  
-`[yellow release]` för installerad produktversion  
-`[yellow log]` för senaste poster i loggfilen `system/extensions/yellow-website.log`  
+`[yellow log]` för webbplatsens loggfil 
 
 ## Exempel
 
@@ -46,22 +45,12 @@ Innehållsfil med installerade tillägg:
     ! {.important}
     ! [yellow about]
 
-Innehållsfil med installerad produktversion:
+Innehållsfil med webbplatsens loggfil:
 
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar den installerade produktversionen.
-
-    ! {.important}
-    ! [yellow release]
-
-Innehållsfil med loggfil:
-
-    ---
-    Title: Exempelsida
-    ---
-    Den här sidan visar de senaste posterna i loggfilen.
+    Den här sidan visar webbplatsens loggfil.
 
     ! {.important}
     ! [yellow log]
@@ -90,6 +79,10 @@ Visa tillägg på kommandoraden:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 
+Visa loggfil på kommandoraden:
+
+`php yellow.php log`  
+
 ## Inställningar
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
@@ -101,6 +94,7 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
+`UpdateLogEntries ` = antal loggfil inlägg att visa, 0 för obegränsad  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
 [Uppdateringsinställningarna för tillgängliga tillägg ](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns på GitHub.

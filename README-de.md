@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.5
+# Update 0.9.6
 
 Webseite auf dem neusten Stand halten.
 
@@ -31,8 +31,7 @@ Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.co
 Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen:
 
 `[yellow about]` für installierte Erweiterungen  
-`[yellow release]` für installierte Produktversion  
-`[yellow log]` für neueste Einträge in der Logdatei `system/extensions/yellow-website.log`  
+`[yellow log]` für Logdatei der Webseite  
 
 ## Beispiele
 
@@ -46,22 +45,12 @@ Inhaltsdatei mit installierten Erweiterungen:
     ! {.important}
     ! [yellow about]
 
-Inhaltsdatei mit installierter Produktversion:
+Inhaltsdatei mit Logdatei der Webseite:
 
     ---
     Title: Beispiel-Seite
     ---
-    Diese Seite zeigt die installierte Produktversion.
-
-    ! {.important}
-    ! [yellow release]
-
-Inhaltsdatei mit Logdatei:
-
-    ---
-    Title: Beispiel-Seite
-    ---
-    Diese Seite zeigt die neuesten Einträge in der Logdatei.
+    Diese Seite zeigt die Logdatei der Webseite.
 
     ! {.important}
     ! [yellow log]
@@ -90,6 +79,10 @@ Erweiterungen in der Befehlszeile anzeigen:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`   
 
+Logdatei in der Befehlszeile anzeigen:
+
+`php yellow.php log`  
+
 ## Einstellungen
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
@@ -101,6 +94,7 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateExtensionFile` = Datei mit Erweiterungseinstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
+`UpdateLogEntries ` = Anzahl der Logdatei-Einträge die angezeigt werden, 0 für unbegrenzt  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
 Die [Aktualisierungseinstellungen für verfügbare Erweiterungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auf GitHub.
