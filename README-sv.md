@@ -16,7 +16,7 @@ Du kan hitta [tillgängliga tillägg på webbplatsen](https://datenstrom.se/sv/y
 
 Det första alternativet är att uppdatera tillägg i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna och leta efter uppdateringar. Din webbplats kommer att visas om uppdateringar är tillgängliga. Du måste ha uppdateringsrättigheter för att uppdatera tillägg. Alla användarkonton lagras i filen `system/extensions/yellow-user.ini`.
 
-Det andra alternativet är att uppdatera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera alla tillägg skriv `php yellow.php update all`. Du kan eventuellt lägga till namnet på ett tillägg.
+Det andra alternativet är att uppdatera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera alla tillägg skriv `php yellow.php update all`. Du kan valfritt lägga till namnet på ett tillägg.
 
 ## Hur man avinstallerar tillägg
 
@@ -26,7 +26,7 @@ Om filer raderas kan du hitta dem i `system/trash` mappen.
 
 ## Hur man visar tillägg
 
-Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna. Du kan också visa den aktuella versionen på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php about`.
+Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna. Du kan visa de installerade tilläggen på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php about`. Du kan valfritt lägga till namnet på ett tillägg.
 
 Du kan använda förkortningar för att visa information om webbplatsen:
 
@@ -96,6 +96,8 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateEventDaily` = tid för nästa dagliga händelse  
 `UpdateLogEntries ` = antal loggfil inlägg att visa, 0 för obegränsad  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
+
+Webbplatsens loggfil finns i filen `system/extensions/yellow-website.log`.
 
 [Uppdateringsinställningarna för tillgängliga tillägg ](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns på GitHub.
 

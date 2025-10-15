@@ -16,7 +16,7 @@ You can find [available extensions on the website](https://datenstrom.se/yellow/
 
 The first option is to update extensions in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings and check for updates. Your website will show if updates are available. You need to have update rights to update extensions. All user accounts are stored in file `system/extensions/yellow-user.ini`. 
 
-The second option is to update extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php update`. This will show if updates are available. To update all extensions type `php yellow.php update all`. You can optionally add the name of an extension. 
+The second option is to update extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php update`. This will show if updates are available. To update all extensions type `php yellow.php update all`. You can optionally add the name of an extension.
 
 ## How to uninstall extensions
 
@@ -26,7 +26,7 @@ If files are deleted you can find them in the `system/trash` folder.
 
 ## How to show extensions
 
-You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can also show the current version at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. 
+You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can show the installed extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. You can optionally add the name of an extension.
 
 You can use shortcuts to show information about the website:
 
@@ -96,6 +96,8 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateEventDaily` = time of next daily event  
 `UpdateLogEntries` = number of log file entries to show, 0 for unlimited  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
+
+The log file of the website can be found in file `system/extensions/yellow-website.log`.
 
 The [update settings for available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found on GitHub.
 

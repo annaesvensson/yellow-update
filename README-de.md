@@ -16,7 +16,7 @@ Du findest [verfügbare Erweiterungen auf der Webseite](https://datenstrom.se/de
 
 Die erste Möglichkeit besteht darin, Erweiterungen im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) zu aktualisieren. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen und suche nach Aktualisierungen. Deine Webseite zeigt an, ob Aktualisierungen verfügbar sind. Du benötigst Update-Rechte, um Erweiterungen zu aktualisieren. Alle Benutzerkonten werden in der Datei `system/extensions/yellow-user.ini` gespeichert.
 
-Die zweite Möglichkeit besteht darin, Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) zu aktualisieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php update`. Das zeigt an ob Aktualisierungen verfügbar sind. Zum Aktualisieren aller Erweiterungen gib ein `php yellow.php update all`. Du kannst wahlweise den Namen einer Erweiterung angeben. 
+Die zweite Möglichkeit besteht darin, Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) zu aktualisieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php update`. Das zeigt an ob Aktualisierungen verfügbar sind. Zum Aktualisieren aller Erweiterungen gib ein `php yellow.php update all`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
 ## Wie man Erweiterungen deinstalliert
 
@@ -26,7 +26,7 @@ Falls Dateien gelöscht werden, kannst du sie im `system/trash`-Verzeichnis wied
 
 ## Wie man Erweiterungen anzeigt
 
-Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) anzeigen. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen. Du kannst die aktuelle Version auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) anzeigen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php about`. 
+Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) anzeigen. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen. Du kannst die installierten Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) anzeigen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php about`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
 Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen:
 
@@ -96,6 +96,8 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
 `UpdateLogEntries ` = Anzahl der Logdatei-Einträge die angezeigt werden, 0 für unbegrenzt  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
+
+Die Logdatei der Webseite findet man in der Datei `system/extensions/yellow-website.log`.
 
 Die [Aktualisierungseinstellungen für verfügbare Erweiterungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auf GitHub.
 
