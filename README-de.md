@@ -97,9 +97,11 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateLogEntries ` = Anzahl der Logdatei-Einträge die angezeigt werden, 0 für unbegrenzt  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
-Die Logdatei der Webseite findet man in der Datei `system/extensions/yellow-website.log`.
+Die folgenden Einstellungen sind wichtig für den Aktualisieriungsmechanismus:
 
-Die [Aktualisierungseinstellungen für verfügbare Erweiterungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) findet man auf GitHub.
+`system/extensions/update-available.ini` = [Datei mit Aktualisierungseinstellungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) für verfügbare Erweiterungen  
+`system/extensions/update-installed.ini` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
+`system/extensions/yellow-website.log` = Logdatei der Webseite  
 
 ## Danksagung
 

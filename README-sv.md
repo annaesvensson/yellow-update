@@ -97,9 +97,11 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateLogEntries ` = antal loggfil inlägg att visa, 0 för obegränsad  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
-Webbplatsens loggfil finns i filen `system/extensions/yellow-website.log`.
+Följande filer är viktiga för uppdateringsmekanismen:
 
-[Uppdateringsinställningarna för tillgängliga tillägg ](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) finns på GitHub.
+`system/extensions/update-available.ini` = [fil med uppdateringsinställningar](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) för tillgängliga tillägg  
+`system/extensions/update-installed.ini` = fil med uppdateringsinställningar för installerade tillägg  
+`system/extensions/yellow-website.log` = webbplatsens loggfil  
 
 ## Tack
 

@@ -97,9 +97,11 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateLogEntries` = number of log file entries to show, 0 for unlimited  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
-The log file of the website can be found in file `system/extensions/yellow-website.log`.
+The following files are important for the update mechanism:
 
-The [update settings for available extensions](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) can be found on GitHub.
+`system/extensions/update-available.ini` = [file with update settings](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) for available extensions  
+`system/extensions/update-installed.ini` = file with update settings for installed extensions  
+`system/extensions/yellow-website.log` = log file of the website  
 
 ## Acknowledgements
 
