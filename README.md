@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.7
+# Update 0.9.8
 
 Keep your extensions up to date.
 
@@ -28,10 +28,7 @@ If files are deleted you can find them in the `system/trash` folder.
 
 You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can show the installed extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. You can optionally add the name of an extension.
 
-You can use shortcuts to show information about the website:
-
-`[yellow about]` for installed extensions  
-`[yellow log]` for log file of the website  
+You can use the `[about]` shortcut to show installed extension.
 
 ## Examples
 
@@ -43,17 +40,7 @@ Content file with installed extensions:
     This page shows the installed extensions.
 
     ! {.important}
-    ! [yellow about]
-
-Content file with log file of the website:
-
-    ---
-    Title: Example page
-    ---
-    This page shows the log file of the website.
-
-    ! {.important}
-    ! [yellow log]
+    ! [about]
 
 Installing extensions at the command line:
 
@@ -79,10 +66,6 @@ Showing extensions at the command line:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 
-Showing log file at the command line:
-
-`php yellow.php log`  
-
 ## Settings
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
@@ -94,7 +77,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateExtensionFile` = file with extension settings  
 `UpdateEventPending` = pending events  
 `UpdateEventDaily` = time of next daily event  
-`UpdateLogEntries` = number of log file entries to show, 0 for unlimited  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
 The following files are important for the update mechanism:

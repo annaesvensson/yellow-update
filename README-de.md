@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.7
+# Update 0.9.8
 
 Erweiterungen auf dem neusten Stand halten.
 
@@ -28,10 +28,7 @@ Falls Dateien gelöscht werden, kannst du sie im `system/trash`-Verzeichnis wied
 
 Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/README-de.md) anzeigen. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen. Du kannst die installierten Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) anzeigen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php about`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
-Du kannst Abkürzungen verwenden, um Informationen über die Webseite anzuzeigen:
-
-`[yellow about]` für installierte Erweiterungen  
-`[yellow log]` für Logdatei der Webseite  
+Du kannst die `[about]`-Abkürzungen verwenden, um installierte Erweiterungen anzuzeigen.
 
 ## Beispiele
 
@@ -43,17 +40,7 @@ Inhaltsdatei mit installierten Erweiterungen:
     Diese Seite zeigt die installierten Erweiterungen.
 
     ! {.important}
-    ! [yellow about]
-
-Inhaltsdatei mit Logdatei der Webseite:
-
-    ---
-    Title: Beispiel-Seite
-    ---
-    Diese Seite zeigt die Logdatei der Webseite.
-
-    ! {.important}
-    ! [yellow log]
+    ! [about]
 
 Erweiterungen in der Befehlszeile installieren:
 
@@ -79,10 +66,6 @@ Erweiterungen in der Befehlszeile anzeigen:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`   
 
-Logdatei in der Befehlszeile anzeigen:
-
-`php yellow.php log`  
-
 ## Einstellungen
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
@@ -94,7 +77,6 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 `UpdateExtensionFile` = Datei mit Erweiterungseinstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
-`UpdateLogEntries ` = Anzahl der Logdatei-Einträge die angezeigt werden, 0 für unbegrenzt  
 `UpdateTrashTimeout` = Speicherung von gelöschten Dateien in Sekunden  
 
 Die folgenden Einstellungen sind wichtig für den Aktualisieriungsmechanismus:

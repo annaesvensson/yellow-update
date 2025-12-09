@@ -1,6 +1,6 @@
 <p align="right"><a href="README-de.md">Deutsch</a> &nbsp; <a href="README.md">English</a> &nbsp; <a href="README-sv.md">Svenska</a></p>
 
-# Update 0.9.7
+# Update 0.9.8
 
 Håll dina tillägg uppdaterade.
 
@@ -28,10 +28,7 @@ Om filer raderas kan du hitta dem i `system/trash` mappen.
 
 Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/README-sv.md). Logga in med ditt användarkonto. Gå till inställningarna. Du kan visa de installerade tilläggen på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/README-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php about`. Du kan valfritt lägga till namnet på ett tillägg.
 
-Du kan använda förkortningar för att visa information om webbplatsen:
-
-`[yellow about]` för installerade tillägg  
-`[yellow log]` för webbplatsens loggfil 
+Du kan använda `[about]`-förkortningen för att visa installerade tillägg.
 
 ## Exempel
 
@@ -43,17 +40,7 @@ Innehållsfil med installerade tillägg:
     Den här sidan visar de installerade tilläggen.
 
     ! {.important}
-    ! [yellow about]
-
-Innehållsfil med webbplatsens loggfil:
-
-    ---
-    Title: Exempelsida
-    ---
-    Den här sidan visar webbplatsens loggfil.
-
-    ! {.important}
-    ! [yellow log]
+    ! [about]
 
 Installera tillägg på kommandoraden:
 
@@ -79,10 +66,6 @@ Visa tillägg på kommandoraden:
 `php yellow.php about gallery`  
 `php yellow.php about english german swedish`  
 
-Visa loggfil på kommandoraden:
-
-`php yellow.php log`  
-
 ## Inställningar
 
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
@@ -94,7 +77,6 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
-`UpdateLogEntries ` = antal loggfil inlägg att visa, 0 för obegränsad  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
 Följande filer är viktiga för uppdateringsmekanismen:
