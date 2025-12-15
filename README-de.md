@@ -10,7 +10,7 @@ Erweiterungen auf dem neusten Stand halten.
 
 Du kannst Erweiterungen als ZIP-Dateien herunterladen und in dein `system/extensions`-Verzeichnis kopieren. Entpacke die ZIP-Dateien nicht, sondern lasse sie unverändert. Öffnen deine Webseite im Webbrowser und klicke auf "Neu laden". Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/README-de.md) installieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php install` gefolgt von weiteren Argumenten.
 
-[Es gibt verfügbare Erweiterungen auf der offiziellen Webseite](https://datenstrom.se/de/yellow/extensions/), [experimentelle Erweiterungen auf GitHub](https://github.com/topics/datenstrom-yellow) und [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
+Es gibt [Erweiterungen auf der offiziellen Webseite](https://datenstrom.se/de/yellow/extensions/), [experimentelle Erweiterungen auf GitHub](https://github.com/topics/datenstrom-yellow) und [experimentelle Erweiterungen auf Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1).
 
 ## Wie man Erweiterungen aktualisiert
 
@@ -39,8 +39,7 @@ Inhaltsdatei mit installierten Erweiterungen:
     ---
     Diese Seite zeigt die installierten Erweiterungen.
 
-    ! {.important}
-    ! [about]
+    [about]
 
 Erweiterungen in der Befehlszeile installieren:
 
