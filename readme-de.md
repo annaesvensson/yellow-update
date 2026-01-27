@@ -18,6 +18,8 @@ Die erste Möglichkeit besteht darin, Erweiterungen im [Webbrowser](https://gith
 
 Die zweite Möglichkeit besteht darin, Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) zu aktualisieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php update`. Das zeigt an ob Aktualisierungen verfügbar sind. Zum Aktualisieren aller Erweiterungen gib ein `php yellow.php update all`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
+Die dritte Möglichkeit besteht darin, Erweiterungen manuell zu aktualisieren. Lade Erweiterungen als ZIP-Dateien herunter und kopiere sie in dein `system/extensions`-Verzeichnis. Entpacke die ZIP-Dateien nicht, sondern lasse sie unverändert. Öffnen deine Webseite im Webbrowser und klicke auf "Neu laden". Das ist die einzige Möglichkeit experimentelle Erweiterungen zu aktualisieren. Die Verwendung von experimentellen Erweiterungen erfolgt auf eigene Gefahr.
+
 ## Wie man Erweiterungen deinstalliert
 
 Du kannst Erweiterungen als PHP-Dateien manuell entfernen. Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) deinstallieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php uninstall` gefolgt von weiteren Argumenten.
