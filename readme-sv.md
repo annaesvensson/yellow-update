@@ -18,7 +18,7 @@ Det första alternativet är att uppdatera tillägg i en [webbläsare](https://g
 
 Det andra alternativet är att uppdatera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera alla tillägg skriv `php yellow.php update all`. Du kan valfritt lägga till namnet på ett tillägg.
 
-Det tredje alternativet är att uppdatera tillägg manuellt. Ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Detta är det enda sättet att uppdatera experimentella tillägg.
+Det tredje alternativet är att uppdatera tillägg manuellt. Ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Detta är det rekommenderade sättet att uppdatera experimentella tillägg.
 
 ## Hur man avinstallerar tillägg
 

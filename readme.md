@@ -18,7 +18,7 @@ The first option is to update extensions in a [web browser](https://github.com/a
 
 The second option is to update extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php update`. This will show if updates are available. To update all extensions type `php yellow.php update all`. You can optionally add the name of an extension.
 
-The third option is to update extensions manually. Download extensions as ZIP files and copy them into your `system/extensions` folder. Do not unzip ZIP files, leave them unchanged. Open your website in a web browser and click "Reload". This is the only way to update experimental extensions.
+The third option is to update extensions manually. Download extensions as ZIP files and copy them into your `system/extensions` folder. Do not unzip ZIP files, leave them unchanged. Open your website in a web browser and click "Reload". This is the recommended way to update experimental extensions.
 
 ## How to uninstall extensions
 
