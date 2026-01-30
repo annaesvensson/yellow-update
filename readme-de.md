@@ -8,7 +8,7 @@ Erweiterungen auf dem neusten Stand halten. Entwickelt von Anna Svensson.
 
 Du kannst Erweiterungen als ZIP-Dateien herunterladen und in dein `system/extensions`-Verzeichnis kopieren. Entpacke die ZIP-Dateien nicht, sondern lasse sie unverändert. Öffnen deine Webseite im Webbrowser und klicke auf "Neu laden". Du kannst Erweiterungen auch in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) installieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php install` gefolgt von weiteren Argumenten.
 
-Es gibt [Erweiterungen auf der offiziellen Webseite](https://datenstrom.se/de/yellow/extensions/). Es gibt experimentelle Erweiterungen auf [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1), [GitHub](https://github.com/topics/datenstrom-yellow) und anderen Git-Hosting-Platformen. Denke daran dass nur Erweiterungen die auf der offiziellen Webseite verfügbar sind aktualisiert werden, möglicherweise musst du experimentelle Erweiterungen manuell aktualisieren. Du kannst selbst entscheiden, ob du experimentelle Erweiterungen auf deiner Website benutzen möchtest oder nicht. Nutzung auf eigene Gefahr.
+Es gibt [Erweiterungen auf der offiziellen Webseite](https://datenstrom.se/de/yellow/extensions/). Es gibt experimentelle Erweiterungen auf [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1), [GitHub](https://github.com/topics/datenstrom-yellow) und anderen Git-Hosting-Platformen. Denke daran dass nur Erweiterungen die auf der offiziellen Webseite verfügbar sind aktualisiert werden, möglicherweise musst du experimentelle Erweiterungen manuell aktualisieren. Du kannst selbst entscheiden, ob du experimentelle Erweiterungen auf deiner Website benutzen möchtest oder nicht.
 
 ## Wie man Erweiterungen aktualisiert
 
@@ -16,7 +16,7 @@ Die erste Möglichkeit besteht darin, Erweiterungen im [Webbrowser](https://gith
 
 Die zweite Möglichkeit besteht darin, Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) zu aktualisieren. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php update`. Das zeigt an ob Aktualisierungen verfügbar sind. Zum Aktualisieren aller Erweiterungen gib ein `php yellow.php update all`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
-Die dritte Möglichkeit besteht darin, Erweiterungen manuell zu aktualisieren. Lade Erweiterungen als ZIP-Dateien herunter und kopiere sie in dein `system/extensions`-Verzeichnis. Entpacke die ZIP-Dateien nicht, sondern lasse sie unverändert. Öffnen deine Webseite im Webbrowser und klicke auf "Neu laden". Das ist die empfohlene Art experimentelle Erweiterungen zu aktualisieren.
+Die dritte Möglichkeit besteht darin, Erweiterungen manuell zu aktualisieren. Lade Erweiterungen als ZIP-Dateien herunter und kopiere sie in dein `system/extensions`-Verzeichnis. Entpacke die ZIP-Dateien nicht, sondern lasse sie unverändert. Öffnen deine Webseite im Webbrowser und klicke auf "Neu laden". Das ist die einzigste Art um experimentelle Erweiterungen zu aktualisieren.
 
 ## Wie man Erweiterungen deinstalliert
 

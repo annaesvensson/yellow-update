@@ -8,7 +8,7 @@ Håll dina tillägg uppdaterade. Utvecklad av Anna Svensson.
 
 Du kan ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Du kan också installera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php install` följt av fler argument.
 
-Det finns [tillägg på officiella webbplatsen](https://datenstrom.se/sv/yellow/extensions/). Det finns experimentella tillägg på [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1), [GitHub](https://github.com/topics/datenstrom-yellow) och andra Git-hostingplattformar. Tänk på att endast tillägg som är tillgängliga på den officiella webbplatsen kommer att uppdateras, eventuellt måste du uppdatera experimentella tillägg manuellt. Du kan bestämma om du vill använda experimentella tillägg på din webbplats eller inte. Användning på egen risk.
+Det finns [tillägg på officiella webbplatsen](https://datenstrom.se/sv/yellow/extensions/). Det finns experimentella tillägg på [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=1), [GitHub](https://github.com/topics/datenstrom-yellow) och andra Git-hostingplattformar. Tänk på att endast tillägg som är tillgängliga på den officiella webbplatsen kommer att uppdateras, eventuellt måste du uppdatera experimentella tillägg manuellt. Du kan bestämma om du vill använda experimentella tillägg på din webbplats eller inte.
 
 ## Hur man uppdaterar tillägg
 
@@ -16,7 +16,7 @@ Det första alternativet är att uppdatera tillägg i en [webbläsare](https://g
 
 Det andra alternativet är att uppdatera tillägg på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php update`. Detta kommer att visa om det finns uppdateringar tillgängliga. För att uppdatera alla tillägg skriv `php yellow.php update all`. Du kan valfritt lägga till namnet på ett tillägg.
 
-Det tredje alternativet är att uppdatera tillägg manuellt. Ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Detta är det rekommenderade sättet att uppdatera experimentella tillägg.
+Det tredje alternativet är att uppdatera tillägg manuellt. Ladda ner tillägg som ZIP-filer och kopiera dem till din `system/extensions` mapp. Packa inte upp ZIP-filer, lämna dem oförändrade. Öppna din webbplats i en webbläsare och klicka på "Ladda om". Detta är det enda sättet att uppdatera experimentella tillägg.
 
 ## Hur man avinstallerar tillägg
 
