@@ -8,7 +8,7 @@ Keep your extensions up to date. Developed by Anna Svensson.
 
 You can download extensions as ZIP files and copy them into your `system/extensions` folder. Do not unzip ZIP files, leave them unchanged. Open your website in a web browser and click "Reload". You can also install extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php install` followed by more arguments.
 
-There are [extensions on the official website](https://datenstrom.se/yellow/extensions/). There are experimental extensions on [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=true&sort=moststars), [GitHub](https://github.com/topics/datenstrom-yellow) and other Git hosting platforms. Keep in mind that only extensions available on the official website will be updated, you may need to update experimental extensions manually. You can decide whether or not to use experimental extensions on your website.
+There are [extensions on the official website](https://datenstrom.se/yellow/extensions/). There are experimental extensions on [Codeberg](https://codeberg.org/explore/repos?q=datenstrom-yellow&topic=true&sort=moststars), [GitHub](https://github.com/topics/datenstrom-yellow) and other Git hosting platforms. Keep in mind that only extensions available on the official website will be included in the update mechanism, you may need to update experimental extensions manually. You can decide whether or not to use experimental extensions on your website.
 
 ## How to update extensions
 
