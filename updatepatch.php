@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.5";
+    const VERSION = "0.9.6";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -324,6 +324,14 @@ class YellowUpdatePatch {
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
+            $patch = true;
+        }
+        $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
+        if ($this->yellow->system->isExisting("editSiteEmail")) {
+            $from = $this->yellow->system->get("editSiteEmail");
+            if (!$this->yellow->system->save($fileName, array("from" => $from))) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
         }
