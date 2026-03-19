@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.6";
+    const VERSION = "0.9.7";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -180,7 +180,7 @@ class YellowUpdatePatch {
         $patch = false;
         $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."yellow.log";
         $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreWebsiteFile");
-        if (is_file($fileNameSource)) {
+        if (is_file($fileNameSource) && $this->yellow->system->get("coreWebsiteFile")!="none") {
             $fileData = $this->yellow->toolbox->readFile($fileNameSource);
             $fileDataNew = $this->yellow->toolbox->readFile($fileNameDestination);
             if (!$this->yellow->toolbox->deleteFile($fileNameSource, $this->yellow->system->get("coreTrashDirectory"))) {
