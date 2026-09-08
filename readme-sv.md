@@ -1,4 +1,4 @@
-# Update 0.9.10
+# Update 0.9.11
 
 Håll dina tillägg uppdaterade. Utvecklad av Anna Svensson.
 
@@ -70,9 +70,9 @@ Visa tillägg på kommandoraden:
 Följande inställningar kan konfigureras i filen `system/extensions/yellow-system.ini`:
 
 `UpdateCurrentRelease` = installerad produktversion  
-`UpdateAvailableUrl` = URL med uppdateringar, `auto` för automatisk detektering  
-`UpdateAvailableFile` = fil med uppdateringsinställningar för tillgängliga tillägg  
 `UpdateInstalledFile` = fil med uppdateringsinställningar för installerade tillägg  
+`UpdateMaintainedFile` = fil med uppdateringsinställningar för underhållna tillägg  
+`UpdateMaintainedUrl` = URL med uppdateringar, `auto` för automatisk detektering  
 `UpdateExtensionFile` = fil med tilläggsinställningar  
 `UpdateEventPending` = väntande händelser  
 `UpdateEventDaily` = tid för nästa dagliga händelse  
@@ -80,8 +80,8 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 
 Följande filer är viktiga för uppdateringsmekanismen:
 
-`system/extensions/update-available.ini` = [fil med uppdateringsinställningar](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) för tillgängliga tillägg  
 `system/extensions/update-installed.ini` = fil med uppdateringsinställningar för installerade tillägg  
+`system/extensions/update-maintained.ini` = fil med uppdateringsinställningar för underhållna tillägg  
 `system/extensions/yellow-website.log` = webbplatsens loggfil  
 
 ## Tack

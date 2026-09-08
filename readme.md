@@ -1,4 +1,4 @@
-# Update 0.9.10
+# Update 0.9.11
 
 Keep your extensions up to date. Developed by Anna Svensson.
 
@@ -69,10 +69,10 @@ Showing extensions at the command line:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`UpdateCurrentRelease` = installed product release  
-`UpdateAvailableUrl` = URL with updates, `auto` for automatic detection  
-`UpdateAvailableFile` = file with update settings for available extensions  
+`UpdateInstalledRelease` = installed product release  
 `UpdateInstalledFile` = file with update settings for installed extensions  
+`UpdateMaintainedFile` = file with update settings for maintained extensions  
+`UpdateMaintainedUrl` = URL with updates, `auto` for automatic detection  
 `UpdateExtensionFile` = file with extension settings  
 `UpdateEventPending` = pending events  
 `UpdateEventDaily` = time of next daily event  
@@ -80,8 +80,8 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 The following files are important for the update mechanism:
 
-`system/extensions/update-available.ini` = [file with update settings](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) for available extensions  
 `system/extensions/update-installed.ini` = file with update settings for installed extensions  
+`system/extensions/update-maintained.ini` = file with update settings for maintained extensions  
 `system/extensions/yellow-website.log` = log file of the website  
 
 ## Acknowledgements

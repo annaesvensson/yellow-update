@@ -1,4 +1,4 @@
-# Update 0.9.10
+# Update 0.9.11
 
 Erweiterungen auf dem neusten Stand halten. Entwickelt von Anna Svensson.
 
@@ -69,10 +69,10 @@ Erweiterungen in der Befehlszeile anzeigen:
 
 Die folgenden Einstellungen können in der Datei `system/extensions/yellow-system.ini` vorgenommen werden:
 
-`UpdateCurrentRelease` = installierte Produktversion  
-`UpdateAvailableUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
-`UpdateAvailableFile` = Datei mit Aktualisierungseinstellungen für verfügbare Erweiterungen  
+`UpdateInstalledRelease` = installierte Produktversion  
 `UpdateInstalledFile` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
+`UpdateMaintainedFile` = Datei mit Aktualisierungseinstellungen für gepflegte Erweiterungen  
+`UpdateMaintainedUrl` = URL mit Aktualisierungen, `auto` für automatische Erkennung  
 `UpdateExtensionFile` = Datei mit Erweiterungseinstellungen  
 `UpdateEventPending` = ausstehende Ereignisse  
 `UpdateEventDaily` = Zeitpunkt des nächsten täglichen Ereignisses  
@@ -80,8 +80,8 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 
 Die folgenden Einstellungen sind wichtig für den Aktualisieriungsmechanismus:
 
-`system/extensions/update-available.ini` = [Datei mit Aktualisierungseinstellungen](https://raw.githubusercontent.com/datenstrom/yellow/main/system/extensions/update-available.ini) für verfügbare Erweiterungen  
 `system/extensions/update-installed.ini` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
+`system/extensions/update-maintained.ini` = Datei mit Aktualisierungseinstellungen für gepflegte Erweiterungen  
 `system/extensions/yellow-website.log` = Logdatei der Webseite  
 
 ## Danksagung
