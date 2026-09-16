@@ -315,18 +315,6 @@ class YellowUpdatePatch {
             $patch = true;
         }
         $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
-        if ($this->yellow->system->get("updateAvailableFile")=="update-available.ini") {
-            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-available.ini";
-            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-installed.ini";
-            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
-                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
-            }
-            if (!$this->yellow->system->save($fileName, array("updateAvailableFile" => "yellow-update-installed.ini"))) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
-            }
-            $patch = true;
-        }
         if ($this->yellow->system->get("updateInstalledFile")=="update-installed.ini") {
             $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
             $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-installed.ini";
@@ -335,6 +323,18 @@ class YellowUpdatePatch {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             if (!$this->yellow->system->save($fileName, array("updateInstalledFile" => "yellow-update-installed.ini"))) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
+            }
+            $patch = true;
+        }
+        if ($this->yellow->system->get("updateAvailableFile")=="update-available.ini") {
+            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-available.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-maintained.ini";
+            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
+                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
+            if (!$this->yellow->system->save($fileName, array("updateAvailableFile" => "yellow-update-maintained.ini"))) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;
