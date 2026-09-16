@@ -1,4 +1,4 @@
-# Update 0.9.11
+# Update 0.9.12
 
 Erweiterungen auf dem neusten Stand halten. Entwickelt von Anna Svensson.
 
@@ -80,8 +80,8 @@ Die folgenden Einstellungen können in der Datei `system/extensions/yellow-syste
 
 Die folgenden Einstellungen sind wichtig für den Aktualisieriungsmechanismus:
 
-`system/extensions/update-installed.ini` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
-`system/extensions/update-maintained.ini` = Datei mit Aktualisierungseinstellungen für gepflegte Erweiterungen  
+`system/extensions/yellow-update-installed.ini` = Datei mit Aktualisierungseinstellungen für installierte Erweiterungen  
+`system/extensions/yellow-update-maintained.ini` = Datei mit Aktualisierungseinstellungen für gepflegte Erweiterungen  
 `system/extensions/yellow-website.log` = Logdatei der Webseite  
 
 ## Danksagung

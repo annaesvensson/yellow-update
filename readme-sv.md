@@ -1,4 +1,4 @@
-# Update 0.9.11
+# Update 0.9.12
 
 Håll dina tillägg uppdaterade. Utvecklad av Anna Svensson.
 
@@ -80,8 +80,8 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 
 Följande filer är viktiga för uppdateringsmekanismen:
 
-`system/extensions/update-installed.ini` = fil med uppdateringsinställningar för installerade tillägg  
-`system/extensions/update-maintained.ini` = fil med uppdateringsinställningar för underhållna tillägg  
+`system/extensions/yellow-update-installed.ini` = fil med uppdateringsinställningar för installerade tillägg  
+`system/extensions/yellow-update-maintained.ini` = fil med uppdateringsinställningar för underhållna tillägg  
 `system/extensions/yellow-website.log` = webbplatsens loggfil  
 
 ## Tack

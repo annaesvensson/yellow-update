@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.7";
+    const VERSION = "0.9.8";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -268,15 +268,11 @@ class YellowUpdatePatch {
     public function checkDatenstromYellow09() {
         $patch = false;
         if (is_file("system/extensions/core.php") && is_file("system/workers/core.php")) {
-            $path = "system/extensions/";
-            foreach ($this->yellow->toolbox->getDirectoryEntries($path, "/^.*$/", true, false, false) as $entry) {
-                if (in_array($entry, array("core.php", "update-latest.ini"))) {
-                    $fileNameObsolete = $path.$entry;
-                    if (!$this->yellow->toolbox->deleteFile($fileNameObsolete, $this->yellow->system->get("coreTrashDirectory"))) {
-                        $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
-                    }
-                }
+            $fileNameObsolete = "system/extensions/core.php";
+            if (!$this->yellow->toolbox->deleteFile($fileNameObsolete, $this->yellow->system->get("coreTrashDirectory"))) {
+                $this->yellow->toolbox->log("error", "Can't delete file '$fileNameObsolete'!");
             }
+            $patch = true;
         }
         if (is_file("system/extensions/update.php") && is_file("system/workers/update.php")) {
             $pathSource = "system/extensions/";
@@ -296,7 +292,7 @@ class YellowUpdatePatch {
                 }
             }
             $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-current.ini";
-            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-installed.ini";
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
@@ -318,16 +314,31 @@ class YellowUpdatePatch {
             }
             $patch = true;
         }
-        if ($this->yellow->system->isExisting("coreExtensionFile")) {
-            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreExtensionFile");
-            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
+        $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
+        if ($this->yellow->system->get("updateInstalledFile")=="update-installed.ini") {
+            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-installed.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-installed.ini";
             if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
                 !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
+            if (!$this->yellow->system->save($fileName, array("updateInstalledFile" => "yellow-update-installed.ini"))) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
+            }
             $patch = true;
         }
-        $fileName = $this->yellow->system->get("coreExtensionDirectory").$this->yellow->system->get("coreSystemFile");
+        if ($this->yellow->system->get("updateMaintainedFile")=="update-maintained.ini") {
+            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-maintained.ini";
+            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-maintained.ini";
+            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
+                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
+            }
+            if (!$this->yellow->system->save($fileName, array("updateMaintainedFile" => "yellow-update-maintained.ini"))) {
+                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
+            }
+            $patch = true;
+        }
         if ($this->yellow->system->isExisting("editSiteEmail")) {
             $from = $this->yellow->system->get("editSiteEmail");
             if (!$this->yellow->system->save($fileName, array("from" => $from))) {

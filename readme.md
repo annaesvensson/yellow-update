@@ -1,4 +1,4 @@
-# Update 0.9.11
+# Update 0.9.12
 
 Keep your extensions up to date. Developed by Anna Svensson.
 
@@ -80,8 +80,8 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 The following files are important for the update mechanism:
 
-`system/extensions/update-installed.ini` = file with update settings for installed extensions  
-`system/extensions/update-maintained.ini` = file with update settings for maintained extensions  
+`system/extensions/yellow-update-installed.ini` = file with update settings for installed extensions  
+`system/extensions/yellow-update-maintained.ini` = file with update settings for maintained extensions  
 `system/extensions/yellow-website.log` = log file of the website  
 
 ## Acknowledgements
