@@ -78,11 +78,10 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `UpdateEventDaily` = time of next daily event  
 `UpdateTrashTimeout` = storage of deleted files in seconds  
 
-The following files are important for the update mechanism:
+The following files are part of the update mechanism:
 
 `system/extensions/yellow-update-installed.ini` = file with update settings for installed extensions  
 `system/extensions/yellow-update-maintained.ini` = file with update settings for maintained extensions  
-`system/extensions/yellow-website.log` = log file of the website  
 
 ## Acknowledgements
 

@@ -78,11 +78,10 @@ Följande inställningar kan konfigureras i filen `system/extensions/yellow-syst
 `UpdateEventDaily` = tid för nästa dagliga händelse  
 `UpdateTrashTimeout` = lagring av raderade filer i sekunder  
 
-Följande filer är viktiga för uppdateringsmekanismen:
+Följande filer är del av uppdateringsmekanismen:
 
 `system/extensions/yellow-update-installed.ini` = fil med uppdateringsinställningar för installerade tillägg  
 `system/extensions/yellow-update-maintained.ini` = fil med uppdateringsinställningar för underhållna tillägg  
-`system/extensions/yellow-website.log` = webbplatsens loggfil  
 
 ## Tack
 
