@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "0.9.8";
+    const VERSION = "1.0.1";
     public $yellow;                 // access to API
     
     // Handle initialisation
