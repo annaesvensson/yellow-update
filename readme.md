@@ -32,12 +32,12 @@ You can use the `[about]` shortcut to show installed extension.
 
 ## Examples
 
-Content file with extensions shortcut:
+Content file with about shortcut:
 
     ---
     Title: Example page
     ---
-    This is an example page with extensions shortcut.
+    This is an example page with about shortcut.
 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 

@@ -32,12 +32,12 @@ Du kan använda `[about]`-förkortningen för att visa installerade tillägg.
 
 ## Exempel
 
-Innehållsfil med tillägg-förkortning:
+Innehållsfil med about-förkortning:
 
     ---
     Title: Exempelsida
     ---
-    Detta är en exempelsida med tillägg-förkortning.
+    Detta är en exempelsida med about-förkortning.
 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
