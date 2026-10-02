@@ -43,7 +43,7 @@ Innehållsfil med about-förkortning:
     tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
     
-    [about].
+    [about]
 
 Installera tillägg på kommandoraden:
 
