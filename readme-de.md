@@ -32,12 +32,16 @@ Du kannst die `[about]`-Abkürzungen verwenden, um installierte Erweiterungen an
 
 ## Beispiele
 
-Inhaltsdatei mit installierten Erweiterungen:
+Inhaltsdatei mit Erweiterungen-Abkürzung:
 
     ---
-    Title: Beispiel-Seite
+    Title: Beispielseite
     ---
-    Diese Seite zeigt die installierten Erweiterungen.
+    Das ist eine Beispielseite mit Erweiterungen-Abkürzung.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 
     [about]
 

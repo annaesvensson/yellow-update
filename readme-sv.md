@@ -32,14 +32,18 @@ Du kan använda `[about]`-förkortningen för att visa installerade tillägg.
 
 ## Exempel
 
-Innehållsfil med installerade tillägg:
+Innehållsfil med tillägg-förkortning:
 
     ---
     Title: Exempelsida
     ---
-    Den här sidan visar de installerade tilläggen.
+    Detta är en exempelsida med tillägg-förkortning.
 
-    [about]
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+    
+    [about].
 
 Installera tillägg på kommandoraden:
 
