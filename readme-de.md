@@ -1,4 +1,4 @@
-# Update 1.0.2
+# Update 1.0.3
 
 Erweiterungen auf dem neusten Stand halten. Entwickelt von Anna Svensson.
 
@@ -28,22 +28,7 @@ Falls Dateien gelöscht werden, kannst du sie im `system/trash`-Verzeichnis wied
 
 Du kannst die aktuelle Version deiner Webseite im [Webbrowser](https://github.com/annaesvensson/yellow-edit/tree/main/readme-de.md) anzeigen. Melde dich mit deinem Benutzerkonto an. Gehe in die Einstellungen. Du kannst die installierten Erweiterungen in der [Befehlszeile](https://github.com/annaesvensson/yellow-core/tree/main/readme-de.md) anzeigen. Öffne ein Terminalfenster. Gehe ins Installations-Verzeichnis, dort wo sich die Datei `yellow.php` befindet. Gib ein `php yellow.php about`. Du kannst wahlweise den Namen einer Erweiterung angeben.
 
-Du kannst die `[about]`-Abkürzungen verwenden, um installierte Erweiterungen anzuzeigen.
-
 ## Beispiele
-
-Inhaltsdatei mit About-Abkürzung:
-
-    ---
-    Title: Beispielseite
-    ---
-    Das ist eine Beispielseite mit About-Abkürzung.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-
-    [about]
 
 Erweiterungen in der Befehlszeile installieren:
 

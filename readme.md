@@ -1,4 +1,4 @@
-# Update 1.0.2
+# Update 1.0.3
 
 Keep your extensions up to date. Developed by Anna Svensson.
 
@@ -28,22 +28,7 @@ If files are deleted you can find them in the `system/trash` folder.
 
 You can show the current version of your website in a [web browser](https://github.com/annaesvensson/yellow-edit). Log in with your user account. Go to the settings. You can show the installed extensions at the [command line](https://github.com/annaesvensson/yellow-core). Open a terminal window. Go to your installation folder, where the file `yellow.php` is. Type `php yellow.php about`. You can optionally add the name of an extension.
 
-You can use the `[about]` shortcut to show installed extension.
-
 ## Examples
-
-Content file with about shortcut:
-
-    ---
-    Title: Example page
-    ---
-    This is an example page with about shortcut.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-
-    [about]
 
 Installing extensions at the command line:
 

@@ -1,4 +1,4 @@
-# Update 1.0.2
+# Update 1.0.3
 
 Håll dina tillägg uppdaterade. Utvecklad av Anna Svensson.
 
@@ -28,22 +28,7 @@ Om filer raderas kan du hitta dem i `system/trash` mappen.
 
 Du kan visa den aktuella versionen av din webbplats i en [webbläsare](https://github.com/annaesvensson/yellow-edit/tree/main/readme-sv.md). Logga in med ditt användarkonto. Gå till inställningarna. Du kan visa de installerade tilläggen på [kommandoraden](https://github.com/annaesvensson/yellow-core/tree/main/readme-sv.md). Öppna ett terminalfönster. Gå till installationsmappen där filen `yellow.php` finns. Skriv `php yellow.php about`. Du kan valfritt lägga till namnet på ett tillägg.
 
-Du kan använda `[about]`-förkortningen för att visa installerade tillägg.
-
 ## Exempel
-
-Innehållsfil med about-förkortning:
-
-    ---
-    Title: Exempelsida
-    ---
-    Detta är en exempelsida med about-förkortning.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-    
-    [about]
 
 Installera tillägg på kommandoraden:
 
