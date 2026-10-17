@@ -1,4 +1,4 @@
-# Update 1.0.3
+# Update 1.0.4
 
 Håll dina tillägg uppdaterade. Utvecklad av Anna Svensson.
 

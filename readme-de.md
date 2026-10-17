@@ -1,4 +1,4 @@
-# Update 1.0.3
+# Update 1.0.4
 
 Erweiterungen auf dem neusten Stand halten. Entwickelt von Anna Svensson.
 
