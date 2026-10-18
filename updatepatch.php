@@ -2,7 +2,7 @@
 // Update extension, https://github.com/annaesvensson/yellow-update
 
 class YellowUpdatePatch {
-    const VERSION = "1.0.1";
+    const VERSION = "1.0.2";
     public $yellow;                 // access to API
     
     // Handle initialisation
@@ -335,18 +335,6 @@ class YellowUpdatePatch {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
             }
             if (!$this->yellow->system->save($fileName, array("updateAvailableFile" => "yellow-update-maintained.ini"))) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
-            }
-            $patch = true;
-        }
-        if ($this->yellow->system->get("updateMaintainedFile")=="update-maintained.ini") {
-            $fileNameSource = $this->yellow->system->get("coreExtensionDirectory")."update-maintained.ini";
-            $fileNameDestination = $this->yellow->system->get("coreExtensionDirectory")."yellow-update-maintained.ini";
-            if (is_file($fileNameSource) && !is_file($fileNameDestination) &&
-                !$this->yellow->toolbox->renameFile($fileNameSource, $fileNameDestination)) {
-                $this->yellow->toolbox->log("error", "Can't write file '$fileNameDestination'!");
-            }
-            if (!$this->yellow->system->save($fileName, array("updateMaintainedFile" => "yellow-update-maintained.ini"))) {
                 $this->yellow->toolbox->log("error", "Can't write file '$fileName'!");
             }
             $patch = true;

@@ -1,4 +1,4 @@
-# Update 1.0.4
+# Update 1.0.5
 
 Keep your extensions up to date. Developed by Anna Svensson.
 
